@@ -1,0 +1,150 @@
+---
+title: The Use of Non-ASCII Characters in RFCs
+abbrev: Non-ASCII in RFCs
+docname: draft-hoffman-rfc7997bis-00
+
+stand_alone: true
+v: 3
+obsoletes: 7997
+
+ipr: trust200902
+kw: Internet-Draft
+cat: info
+consensus: true
+submissionType: IETF
+
+pi:
+  toc: yes
+  sortrefs: yes
+  symrefs: yes
+
+author:
+ -
+   ins: P. Hoffman
+   name: Paul Hoffman
+   org: ICANN
+   email: paul.hoffman@icann.org
+
+normative:
+  RFC7991:
+  RFC7997:
+  UnicodeCurrent:
+    title: The Unicode Standard
+    author:
+    - org: The Unicode Consortium
+    target: http://www.unicode.org/versions/latest/
+
+
+informative:
+  RFC20:
+  RFC7322:
+  UnicodeNorm:
+    title: Unicode Standard Annex #15: Unicode Normalization Form
+    author:
+    - org: The Unicode Consortium
+    target: http://www.unicode.org/reports/tr15/
+
+--- abstract
+
+In order to support the internationalization of protocols and a more diverse Internet community,
+the RFC Series must evolve to allow for the use of non-ASCII characters in RFCs.
+While English remains the required language of the Series, the encoding of RFCs is now in UTF-8,
+allowing for a broader range of characters than typically used in the English language. 
+This document describes the requirements on the RFC Editor and authors of RFCs,
+and gives guidance regarding the use of non-ASCII characters in RFCs.
+
+This document updates RFC 7997 to reflect changes in the practices of the RFC series since RFC 7997 was published,
+and makes further changes based on agreements in the IETF community about what characters are allowed in RFCs.
+
+\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]
+
+--- middle
+
+# Introduction
+
+For much of the history of the RFC Series, the character encoding used for RFCs has been ASCII {{RFC20}}.
+This was a sensible choice at the time: the language of the Series has always been English,
+a language that primarily uses ASCII-encoded characters (ignoring for a moment words borrowed from more richly decorated alphabets);
+and, ASCII is the "lowest common denominator" for character encoding, making cross-platform viewing trivial.
+
+There are limits to ASCII, however, that hinder its continued use as the exclusive character encoding for the Series. 
+At the time of the publication of {{RFC7997}},
+the increasing need for easily readable, internationalized content suggested that it is time to allow non-ASCII characters in RFCs where necessary.
+To support this move away from ASCII, RFCs switched to supporting UTF-8 as the default character encoding
+and allowed support for a broad range of Unicode characters {{UnicodeCurrent}}. 
+
+Given the continuing goal of maximum readability across platforms, the use of non-ASCII characters in RFCs should be limited to only where necessary within the text.
+This document describes the rules under which non-ASCII characters may be used in an RFC.
+These rules will be applied as the necessary changes are made to submission checking and editorial tools.
+
+This document updates the RFC Style Guide {{RFC7322}}.
+
+The details included in this document are expected to change based on experience gained in publishing new RFCs.
+
+## Acknowledgements
+
+RFC 7997 was written by Heather Flanagan, who was the RFC Series Editor at the time of its publication.
+Gettting the IETF community to agree to the changes embodied in RFC 7997 was a difficult task,
+and it is likely that this current document would be much more difficult to write had RFC 7997 not been worked out first.
+
+The acknowledgements from RFC 7997 are
+to the members of the IAB i18n program,
+to the RFC Format Design Team:
+Nevil Brownlee, Tony Hansen, Joe
+Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach,
+Alice Russo, Robert Sparks, and Dave Thaler.
+
+## Changes from RFC 7997
+
+The following is an overview of the changes in this document from RFC 7997:
+
+- Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
+For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
+
+- The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability
+of search engines and web browsers.
+
+
+# Acceptable Code Points
+
+Note that the RFC stream managers and RFC Editor may reject any code point that does not render adequately across all formats or in enough rendering engines using the v3 tooling.
+
+
+# Basic Requirements {#basic_requirements}
+
+Two fundamental requirements inform the guidance and examples provided in this document.  They are:
+
+- Searches against RFC indexes and database tables should return expected results and support appropriate Unicode string matching behaviors.
+
+- RFCs should be displayed correctly across a wide range of readers and browsers.
+People whose systems do not have the fonts needed to display a particular RFC need to be able to read the various publication formats
+and the XML correctly in order to understand and implement the information described in the document.
+
+
+# Normalization Forms
+
+Authors should not expect normalization forms {{UnicodeNorm}} to be preserved.
+If a particular normalization form is expected, it must be noted in the text of the RFC.
+
+
+# XML Markup
+
+\[ This section needs revision after community discussion \]
+
+As described above, use of non-ASCII characters in areas such as email, company name, address, and name is allowed.
+In order to make it easier for code to identify the appropriate ASCII alternatives,
+authors must include an "ascii" attribute to their XML markup when an ASCII alternative is required.
+See {{RFC7991}} for more detail on how to tag ASCII alternatives.
+
+
+# Internationalization Considerations
+
+The ability to use non-ASCII characters in RFCs in a clear and consistent manner improves the ability to describe
+internationalized protocols and recognizes the diversity of authors.
+However, the goal of readability overrides the use of non-ASCII characters within the text.
+
+# Security Considerations
+
+Valid Unicode that matches the expected text must be verified in order to preserve expected behavior and protocol information.
+
+--- back
