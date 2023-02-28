@@ -195,7 +195,7 @@ The addition of each character name is encouraged.
 
 - Non-ASCII characters require identifying the Unicode code point, at least on first use in the RFC.
 
-- Use of the actual UTF-8 character (such as Δ) is encouraged so that a reader can more easily see what the character is.
+- Use of the actual UTF-8 character (such as common math symbols like ≤) is encouraged so that a reader can more easily see what the character is.
 
 - As stated in {{uses}}, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
 
