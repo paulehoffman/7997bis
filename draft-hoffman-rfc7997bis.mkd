@@ -26,23 +26,33 @@ author:
    email: paul.hoffman@icann.org
 
 normative:
+  BCP137:
   RFC7991:
   RFC7997:
+  RFC9280:
   UnicodeCurrent:
     title: The Unicode Standard
     author:
     - org: The Unicode Consortium
     target: http://www.unicode.org/versions/latest/
-
+    date: 2023
 
 informative:
   RFC20:
   RFC7322:
+  RFC7564:
   UnicodeNorm:
     title: Unicode Standard Annex #15: Unicode Normalization Form
     author:
     - org: The Unicode Consortium
     target: http://www.unicode.org/reports/tr15/
+    date: 2023
+  MerrWeb:
+    author:
+    - org: Merriam-Webster, Inc.
+    title: Merriam-Webster's Collegiate Dictionary
+    date: 2023
+
 
 --- abstract
 
@@ -50,8 +60,8 @@ In order to support the internationalization of protocols and a more diverse Int
 the RFC Series must evolve to allow for the use of non-ASCII characters in RFCs.
 While English remains the required language of the Series, the encoding of RFCs is now in UTF-8,
 allowing for a broader range of characters than typically used in the English language. 
-This document describes the requirements on the RFC Editor and authors of RFCs,
-and gives guidance regarding the use of non-ASCII characters in RFCs.
+This document describes requirements and guidelines for the RFC Production Center and the RFC stream approving bodies
+regarding the use of non-ASCII characters in RFCs.
 
 This document updates RFC 7997 to reflect changes in the practices of the RFC series since RFC 7997 was published,
 and makes further changes based on agreements in the IETF community about what characters are allowed in RFCs.
@@ -83,8 +93,8 @@ The details included in this document are expected to change based on experience
 
 ## Acknowledgements
 
-RFC 7997 was written by Heather Flanagan, who was the RFC Series Editor at the time of its publication.
-Gettting the IETF community to agree to the changes embodied in RFC 7997 was a difficult task,
+RFC 7997 was written by Heather Flanagan, who was the RFC Series Editor (RSE) at the time of its publication.
+Getting the IETF community to agree to the changes embodied in RFC 7997 was a difficult task,
 and it is likely that this current document would be much more difficult to write had RFC 7997 not been worked out first.
 
 The acknowledgements from RFC 7997 are
@@ -98,16 +108,22 @@ Alice Russo, Robert Sparks, and Dave Thaler.
 
 The following is an overview of the changes in this document from RFC 7997:
 
-- Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
-For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
+- Added the role of the RFC stream approving bodies and the RFC Production Center (RPC)
+as described in {{RFC9280}} throughout the document.
+In short, all responsibilities that were held by the RFC Editor in RFC 7997 are now shared between the stream approving bodies and the RPC.
+
+- Removed requirements of marking non-ASCII characters with XML markup.
+Clarified that names with non-Latin characters should have Latin transliterations.
 
 - The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability
 of search engines and web browsers.
 
+- Changed {{uses}} from "Rules for the Use of Non-ASCII Characters" to "Use of Non-ASCII Characters"
+because the stream approving bodies and the RPC have used, and should continue to use,
+their own discretion based on what makes the RFC most useful.
 
-# Acceptable Code Points
-
-Note that the RFC stream managers and RFC Editor may reject any code point that does not render adequately across all formats or in enough rendering engines using the v3 tooling.
+- Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
+For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
 
 
 # Basic Requirements {#basic_requirements}
@@ -119,6 +135,130 @@ Two fundamental requirements inform the guidance and examples provided in this d
 - RFCs should be displayed correctly across a wide range of readers and browsers.
 People whose systems do not have the fonts needed to display a particular RFC need to be able to read the various publication formats
 and the XML correctly in order to understand and implement the information described in the document.
+
+The stream approving bodies and the RPC may reject any code point that does not render adequately in commonly-used viewers.
+
+
+# Use of Non-ASCII Characters {#uses}
+
+This section describes the guidelines for the use of non-ASCII characters in an RFC.
+If the stream approving bodies and the RPC identify areas where the use of non-ASCII characters in an RFC negatively impacts the readability of the text,
+they can require that the authors supply alternate text or change the non-ASCII characters to better suit the expected readers of the RFC.
+
+In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
+
+## General Usage throughout a Document
+
+The language of the RFC Series is English.
+The use of non-ASCII characters is based on the spelling of words commonly used in the English language
+following the guidance in the Merriam-Webster dictionary {{MerrWeb}}.
+RFCs should use the primary spelling listed in that dictionary by default.
+
+Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation,
+giving the Unicode equivalent of the non-ASCII characters is not required,
+but it can improve the readability of the RFC.
+For example, for text that says "The value can be followed by a monetary symbol such as ¥ or €",
+the stream approving body or the RPC might require that it instead say
+"The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
+
+Reference entries (bibliographic text) follow the rules given throughout this section.
+
+\[ The example for this section from RFC 7997 has been removed. It was, in fact, not an example of general
+usage but instead a protocol example. \]
+
+## Person Names {#person_names}
+
+\[ RFC 7997 was inconsistent in its rules and examples of when names with non-ASCII characters should be spelled out using all-ASCII transliteration. 
+This section is significantly updated to clarify how names with non-ASCII characters should appear in RFCs. \]
+
+Person names may appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
+
+When a script outside the ASCII character set is used for an individual name,
+an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
+The stream approving bodies and the RPC decide on a case-by-case basis whether to include the ASCII-only transliteration.
+
+Names of authors appear at the top of RFCs and in the References section with a first initial (if available) and family name.
+For example, Qin Wu's name might appear as "吴钦 (Q. Wu)".
+As another example, Patrik Fältström's name might appear as "P. Fältström (P. Faltstrom)",
+but the version with non-ASCII Latin characters also might be left just as "P. Fältström".
+
+In the Acknowledgements section, the person's full name is spelled out in full without the first initial,
+such as "The following people contributed to this document: 吴钦 (Qin Wu), ...".
+
+Company names follow the same rules as person names.
+
+## Body of the Document {#body_of_document}
+
+When the mention of non-ASCII characters is required for correct protocol operation and understanding,
+the characters' Unicode code points must be used in the text.
+The addition of each character name is encouraged.
+
+- Non-ASCII characters require identifying the Unicode code point, at least on first use in the RFC.
+
+- Use of the actual UTF-8 character (such as Δ) is encouraged so that a reader can more easily see what the character is.
+
+- As stated in {{uses}}, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
+
+\[ Removed "The use of the Unicode character names like "INCREMENT" in addition to the use of Unicode code points is also encouraged."
+This text was, in fact, wrong in 7997 because the character name did not match the example. \]
+
+For example, {{RFC7564}} says:
+
+~~~
+However, the problem is made more serious by introducing the full
+range of Unicode code points into protocol strings.  For example,
+the characters U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 from
+the Cherokee block look similar to the ASCII characters
+"STPETER" as they might appear when presented using a "creative"
+font family.
+~~~
+
+This could be replaced with:
+
+~~~
+However, the problem is made more serious by introducing the full
+range of Unicode code points into protocol strings.  For example,
+the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA
+U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2) from the Cherokee block
+look similar to the ASCII characters "STPETER" as they might
+appear when presented using a "creative" font family.
+~~~
+
+{{BCP137}} describes the pros and cons of different options for
+identifying Unicode characters and may help authors decide how to
+represent the non-ASCII characters in their documents.
+
+## Tables
+
+Tables follow the same rules for identifiers and characters as in {{body_of_document}}.
+If it is more understandable for a reader)for a given document to have two tables,
+one including the identifiers and non-ASCII characters and a second with just the non-ASCII characters,
+authors might include such duplicated information.
+
+## Code Components
+
+The use of the U+ notation is recommended except within a code component where one must follow the rules of the programming
+language in which the code is being written.
+
+Code components are generally expected to use fixed-width fonts.
+Where such fonts are not available for a particular script, the best script-appropriate font will be used for that part of the code component.
+
+## Keywords and Citation Tags
+
+Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements)
+must contain only ASCII characters.
+
+\[ Does the WG still want this restriction? \]
+
+## Authors' Address Information
+
+The purpose of providing authors' address information, either postal or email,
+is to assist readers of an RFC in contacting the author or authors.
+Authors may include the official postal address as recognized by
+their company or local postal service without additional Unicode character identification.
+
+If an author's email address includes non-ASCII characters and is a valid email address at the time of publication,
+it may be given without additional Unicode character identification.
 
 
 # Normalization Forms
