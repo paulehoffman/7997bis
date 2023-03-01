@@ -289,8 +289,8 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    points must be used in the text.  The addition of each character name
    is encouraged.
 
-   *  Non-ASCII characters require identifying the Unicode code poin, at
-      least on first use in the RFC.
+   *  Non-ASCII characters require identifying the Unicode code point,
+      at least on first use in the RFC.
 
    *  Use of the actual UTF-8 character (such as common math symbols
       like &#8730;) is encouraged so that a reader can more easily see
