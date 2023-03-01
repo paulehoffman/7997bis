@@ -4,13 +4,13 @@
 
 Network Working Group                                         P. Hoffman
 Internet-Draft                                                     ICANN
-Obsoletes: 7997 (if approved)                           28 February 2023
+Obsoletes: 7997 (if approved)                               1 March 2023
 Intended status: Informational                                          
-Expires: 1 September 2023
+Expires: 2 September 2023
 
 
                 The Use of Non-ASCII Characters in RFCs
-                      draft-hoffman-rfc7997bis-00
+                      draft-hoffman-rfc7997bis-01
 
 Abstract
 
@@ -46,16 +46,16 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 September 2023.
+   This Internet-Draft will expire on 2 September 2023.
 
 
 
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 1]
+Hoffman                 Expires 2 September 2023                [Page 1]
 
-Internet-Draft              Non-ASCII in RFCs              February 2023
+Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 Copyright Notice
@@ -79,7 +79,7 @@ Table of Contents
      1.2.  Changes from RFC 7997 . . . . . . . . . . . . . . . . . .   3
    2.  Basic Requirements  . . . . . . . . . . . . . . . . . . . . .   4
    3.  Use of Non-ASCII Characters . . . . . . . . . . . . . . . . .   4
-     3.1.  General Usage throughout a Document . . . . . . . . . . .   5
+     3.1.  General Usage throughout a Document . . . . . . . . . . .   4
      3.2.  Person Names  . . . . . . . . . . . . . . . . . . . . . .   5
      3.3.  Body of the Document  . . . . . . . . . . . . . . . . . .   6
      3.4.  Tables  . . . . . . . . . . . . . . . . . . . . . . . . .   7
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 2]
+Hoffman                 Expires 2 September 2023                [Page 2]
 
-Internet-Draft              Non-ASCII in RFCs              February 2023
+Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
    There are limits to ASCII, however, that hinder its continued use as
@@ -165,9 +165,9 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 3]
+Hoffman                 Expires 2 September 2023                [Page 3]
 
-Internet-Draft              Non-ASCII in RFCs              February 2023
+Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
    *  The basic requirements in Section 2 were softened to reflect the
@@ -212,27 +212,19 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
    In general, using the "U+NNNN" syntax from [BCP137] is the suggested
    way to show Unicode code points as alternate text.
 
-
-
-
-
-
-
-
-
-
-Hoffman                 Expires 1 September 2023                [Page 4]
-
-Internet-Draft              Non-ASCII in RFCs              February 2023
-
-
 3.1.  General Usage throughout a Document
 
-   The language of the RFC Series is English.  The use of non-ASCII
-   characters is based on the spelling of words commonly used in the
-   English language following the guidance in the Merriam-Webster
-   dictionary [MerrWeb].  RFCs should use the primary spelling listed in
-   that dictionary by default.
+   As stated in the RFC Style Guide [RFC7322], the language of the RFC
+   Series is English.
+
+
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 4]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
 
    Where the use of non-ASCII characters is purely part of an example
    and not otherwise required for correct protocol operation, giving the
@@ -273,20 +265,22 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
    Faltstrom)", but the version with non-ASCII Latin characters also
    might be left just as "P.  Fältström".
 
-
-
-
-
-Hoffman                 Expires 1 September 2023                [Page 5]
-
-Internet-Draft              Non-ASCII in RFCs              February 2023
-
-
    In the Acknowledgements section, the person's full name is spelled
    out in full without the first initial, such as "The following people
    contributed to this document: 吴钦 (Qin Wu), ...".
 
    Company names follow the same rules as person names.
+
+
+
+
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 5]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
 
 3.3.  Body of the Document
 
@@ -328,19 +322,21 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
    look similar to the ASCII characters "STPETER" as they might
    appear when presented using a "creative" font family.
 
-
-
-
-
-
-Hoffman                 Expires 1 September 2023                [Page 6]
-
-Internet-Draft              Non-ASCII in RFCs              February 2023
-
-
    [BCP137] describes the pros and cons of different options for
    identifying Unicode characters and may help authors decide how to
    represent the non-ASCII characters in their documents.
+
+
+
+
+
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 6]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
 
 3.4.  Tables
 
@@ -389,9 +385,13 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 7]
+
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 7]
 
-Internet-Draft              Non-ASCII in RFCs              February 2023
+Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 5.  XML Markup
@@ -445,13 +445,10 @@ Internet-Draft              Non-ASCII in RFCs              February 2023
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 8]
+Hoffman                 Expires 2 September 2023                [Page 8]
 
-Internet-Draft              Non-ASCII in RFCs              February 2023
+Internet-Draft              Non-ASCII in RFCs                 March 2023
 
-
-   [MerrWeb]  Merriam-Webster, Inc., "Merriam-Webster's Collegiate
-              Dictionary", 2023.
 
    [RFC20]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -501,4 +498,7 @@ Author's Address
 
 
 
-Hoffman                 Expires 1 September 2023                [Page 9]
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 9]

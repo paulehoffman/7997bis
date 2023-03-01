@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-hoffman-rfc7997bis-00
+docname: draft-hoffman-rfc7997bis-01
 
 stand_alone: true
 v: 3
@@ -46,11 +46,6 @@ informative:
     author:
     - org: The Unicode Consortium
     target: http://www.unicode.org/reports/tr15/
-    date: 2023
-  MerrWeb:
-    author:
-    - org: Merriam-Webster, Inc.
-    title: Merriam-Webster's Collegiate Dictionary
     date: 2023
 
 
@@ -149,10 +144,7 @@ In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to sh
 
 ## General Usage throughout a Document
 
-The language of the RFC Series is English.
-The use of non-ASCII characters is based on the spelling of words commonly used in the English language
-following the guidance in the Merriam-Webster dictionary {{MerrWeb}}.
-RFCs should use the primary spelling listed in that dictionary by default.
+As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
 
 Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation,
 giving the Unicode equivalent of the non-ASCII characters is not required,
