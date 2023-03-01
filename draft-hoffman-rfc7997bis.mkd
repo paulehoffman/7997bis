@@ -158,7 +158,7 @@ Reference entries (bibliographic text) follow the rules given throughout this se
 \[ The example for this section from RFC 7997 has been removed. It was, in fact, not an example of general
 usage but instead a protocol example. \]
 
-## Person Names {#person_names}
+## Person and Company Names
 
 \[ RFC 7997 was inconsistent in its rules and examples of when names with non-ASCII characters should be spelled out using all-ASCII transliteration. 
 This section is significantly updated to clarify how names with non-ASCII characters should appear in RFCs. \]
@@ -183,6 +183,7 @@ Company names follow the same rules as person names.
 
 When the mention of non-ASCII characters is required for correct protocol operation and understanding,
 the characters' Unicode code points must be used in the text.
+This is equally true in running text and tables.
 The addition of each character name is encouraged.
 
 - Non-ASCII characters require identifying the Unicode code point, at least on first use in the RFC.
@@ -220,20 +221,9 @@ appear when presented using a "creative" font family.
 identifying Unicode characters and may help authors decide how to
 represent the non-ASCII characters in their documents.
 
-## Tables
-
-Tables follow the same rules for identifiers and characters as in {{body_of_document}}.
-If it is more understandable for a reader)for a given document to have two tables,
-one including the identifiers and non-ASCII characters and a second with just the non-ASCII characters,
-authors might include such duplicated information.
-
-## Code Components
-
-The use of the U+ notation is recommended except within a code component where one must follow the rules of the programming
-language in which the code is being written.
-
-Code components are generally expected to use fixed-width fonts.
-Where such fonts are not available for a particular script, the best script-appropriate font will be used for that part of the code component.
+Code components may have different requirements for using the U+ notation.
+The use of the U+ notation in code components is recommended,
+except within a code component where one must follow the rules of the programming language in which the code is being written.
 
 ## Keywords and Citation Tags
 

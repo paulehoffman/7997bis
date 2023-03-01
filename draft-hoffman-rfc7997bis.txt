@@ -80,20 +80,18 @@ Table of Contents
    2.  Basic Requirements  . . . . . . . . . . . . . . . . . . . . .   4
    3.  Use of Non-ASCII Characters . . . . . . . . . . . . . . . . .   4
      3.1.  General Usage throughout a Document . . . . . . . . . . .   4
-     3.2.  Person Names  . . . . . . . . . . . . . . . . . . . . . .   5
-     3.3.  Body of the Document  . . . . . . . . . . . . . . . . . .   6
-     3.4.  Tables  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     3.5.  Code Components . . . . . . . . . . . . . . . . . . . . .   7
-     3.6.  Keywords and Citation Tags  . . . . . . . . . . . . . . .   7
-     3.7.  Authors' Address Information  . . . . . . . . . . . . . .   7
+     3.2.  Person and Company Names  . . . . . . . . . . . . . . . .   5
+     3.3.  Body of the Document  . . . . . . . . . . . . . . . . . .   5
+     3.4.  Keywords and Citation Tags  . . . . . . . . . . . . . . .   6
+     3.5.  Authors' Address Information  . . . . . . . . . . . . . .   7
    4.  Normalization Forms . . . . . . . . . . . . . . . . . . . . .   7
-   5.  XML Markup  . . . . . . . . . . . . . . . . . . . . . . . . .   8
-   6.  Internationalization Considerations . . . . . . . . . . . . .   8
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
+   5.  XML Markup  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+   6.  Internationalization Considerations . . . . . . . . . . . . .   7
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
      8.2.  Informative References  . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
 
@@ -105,7 +103,9 @@ Table of Contents
    ASCII is the "lowest common denominator" for character encoding,
    making cross-platform viewing trivial.
 
-
+   There are limits to ASCII, however, that hinder its continued use as
+   the exclusive character encoding for the Series.  At the time of the
+   publication of [RFC7997], the increasing need for easily readable,
 
 
 
@@ -114,9 +114,6 @@ Hoffman                 Expires 2 September 2023                [Page 2]
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
-   There are limits to ASCII, however, that hinder its continued use as
-   the exclusive character encoding for the Series.  At the time of the
-   publication of [RFC7997], the increasing need for easily readable,
    internationalized content suggested that it is time to allow non-
    ASCII characters in RFCs where necessary.  To support this move away
    from ASCII, RFCs switched to supporting UTF-8 as the default
@@ -163,15 +160,15 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
       markup.  Clarified that names with non-Latin characters should
       have Latin transliterations.
 
+   *  The basic requirements in Section 2 were softened to reflect the
+      realities of the variability of search engines and web browsers.
+
 
 
 Hoffman                 Expires 2 September 2023                [Page 3]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
-
-   *  The basic requirements in Section 2 were softened to reflect the
-      realities of the variability of search engines and web browsers.
 
    *  Changed Section 3 from "Rules for the Use of Non-ASCII Characters"
       to "Use of Non-ASCII Characters" because the stream approving
@@ -217,7 +214,10 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    As stated in the RFC Style Guide [RFC7322], the language of the RFC
    Series is English.
 
-
+   Where the use of non-ASCII characters is purely part of an example
+   and not otherwise required for correct protocol operation, giving the
+   Unicode equivalent of the non-ASCII characters is not required, but
+   it can improve the readability of the RFC.  For example, for text
 
 
 
@@ -226,10 +226,6 @@ Hoffman                 Expires 2 September 2023                [Page 4]
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
-   Where the use of non-ASCII characters is purely part of an example
-   and not otherwise required for correct protocol operation, giving the
-   Unicode equivalent of the non-ASCII characters is not required, but
-   it can improve the readability of the RFC.  For example, for text
    that says "The value can be followed by a monetary symbol such as ¥
    or €", the stream approving body or the RPC might require that it
    instead say "The value can be followed by a monetary symbol such as ¥
@@ -242,7 +238,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    was, in fact, not an example of general usage but instead a protocol
    example. ]
 
-3.2.  Person Names
+3.2.  Person and Company Names
 
    [ RFC 7997 was inconsistent in its rules and examples of when names
    with non-ASCII characters should be spelled out using all-ASCII
@@ -271,8 +267,12 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
    Company names follow the same rules as person names.
 
+3.3.  Body of the Document
 
-
+   When the mention of non-ASCII characters is required for correct
+   protocol operation and understanding, the characters' Unicode code
+   points must be used in the text.  This is equally true in running
+   text and tables.  The addition of each character name is encouraged.
 
 
 
@@ -281,13 +281,6 @@ Hoffman                 Expires 2 September 2023                [Page 5]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
-
-3.3.  Body of the Document
-
-   When the mention of non-ASCII characters is required for correct
-   protocol operation and understanding, the characters' Unicode code
-   points must be used in the text.  The addition of each character name
-   is encouraged.
 
    *  Non-ASCII characters require identifying the Unicode code point,
       at least on first use in the RFC.
@@ -326,9 +319,16 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    identifying Unicode characters and may help authors decide how to
    represent the non-ASCII characters in their documents.
 
+   Code components may have different requirements for using the U+
+   notation.  The use of the U+ notation in code components is
+   recommended, except within a code component where one must follow the
+   rules of the programming language in which the code is being written.
 
+3.4.  Keywords and Citation Tags
 
-
+   Keywords (as tagged with the <keyword> element in XML) and citation
+   tags (as defined in the anchor attributes of <reference> elements)
+   must contain only ASCII characters.
 
 
 
@@ -338,34 +338,9 @@ Hoffman                 Expires 2 September 2023                [Page 6]
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
-3.4.  Tables
-
-   Tables follow the same rules for identifiers and characters as in
-   Section 3.3.  If it is more understandable for a reader)for a given
-   document to have two tables, one including the identifiers and non-
-   ASCII characters and a second with just the non-ASCII characters,
-   authors might include such duplicated information.
-
-3.5.  Code Components
-
-   The use of the U+ notation is recommended except within a code
-   component where one must follow the rules of the programming language
-   in which the code is being written.
-
-   Code components are generally expected to use fixed-width fonts.
-   Where such fonts are not available for a particular script, the best
-   script-appropriate font will be used for that part of the code
-   component.
-
-3.6.  Keywords and Citation Tags
-
-   Keywords (as tagged with the <keyword> element in XML) and citation
-   tags (as defined in the anchor attributes of <reference> elements)
-   must contain only ASCII characters.
-
    [ Does the WG still want this restriction? ]
 
-3.7.  Authors' Address Information
+3.5.  Authors' Address Information
 
    The purpose of providing authors' address information, either postal
    or email, is to assist readers of an RFC in contacting the author or
@@ -382,17 +357,6 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    Authors should not expect normalization forms [UnicodeNorm] to be
    preserved.  If a particular normalization form is expected, it must
    be noted in the text of the RFC.
-
-
-
-
-
-
-
-Hoffman                 Expires 2 September 2023                [Page 7]
-
-Internet-Draft              Non-ASCII in RFCs                 March 2023
-
 
 5.  XML Markup
 
@@ -422,6 +386,14 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 8.1.  Normative References
 
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 7]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
    [BCP137]   Klensin, J., "ASCII Escaping of Unicode Characters",
               BCP 137, RFC 5137, February 2008.
 
@@ -442,13 +414,6 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
               <http://www.unicode.org/versions/latest/>.
 
 8.2.  Informative References
-
-
-
-Hoffman                 Expires 2 September 2023                [Page 8]
-
-Internet-Draft              Non-ASCII in RFCs                 March 2023
-
 
    [RFC20]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -480,25 +445,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hoffman                 Expires 2 September 2023                [Page 9]
+Hoffman                 Expires 2 September 2023                [Page 8]
