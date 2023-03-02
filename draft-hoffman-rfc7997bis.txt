@@ -20,8 +20,8 @@ Abstract
    required language of the Series, the encoding of RFCs is now in UTF-
    8, allowing for a broader range of characters than typically used in
    the English language.  This document describes requirements and
-   guidelines for the RFC Production Center and the RFC stream approving
-   bodies regarding the use of non-ASCII characters in RFCs.
+   guidelines for the RFC Production Center regarding the use of non-
+   ASCII characters in RFCs.
 
    This document updates RFC 7997 to reflect changes in the practices of
    the RFC series since RFC 7997 was published, and makes further
@@ -81,17 +81,17 @@ Table of Contents
    3.  Use of Non-ASCII Characters . . . . . . . . . . . . . . . . .   4
      3.1.  General Usage throughout a Document . . . . . . . . . . .   4
      3.2.  Person and Company Names  . . . . . . . . . . . . . . . .   5
-     3.3.  Body of the Document  . . . . . . . . . . . . . . . . . .   5
-     3.4.  Keywords and Citation Tags  . . . . . . . . . . . . . . .   6
+     3.3.  Body of the Document  . . . . . . . . . . . . . . . . . .   6
+     3.4.  Keywords and Citation Tags  . . . . . . . . . . . . . . .   7
      3.5.  Authors' Address Information  . . . . . . . . . . . . . .   7
    4.  Normalization Forms . . . . . . . . . . . . . . . . . . . . .   7
    5.  XML Markup  . . . . . . . . . . . . . . . . . . . . . . . . .   7
    6.  Internationalization Considerations . . . . . . . . . . . . .   7
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
      8.2.  Informative References  . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
 
@@ -153,15 +153,15 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    *  Added the role of the RFC stream approving bodies and the RFC
       Production Center (RPC) as described in [RFC9280] throughout the
       document.  In short, all responsibilities that were held by the
-      RFC Editor in RFC 7997 are now shared between the stream approving
-      bodies and the RPC.
+      RFC Editor in RFC 7997 are handled by the RPC.  If the RPC has
+      questions about the content of RFCs, the RPC can ask the RFC
+      stream approving bodies for input.
 
    *  Removed requirements of marking non-ASCII characters with XML
       markup.  Clarified that names with non-Latin characters should
       have Latin transliterations.
 
-   *  The basic requirements in Section 2 were softened to reflect the
-      realities of the variability of search engines and web browsers.
+
 
 
 
@@ -170,10 +170,13 @@ Hoffman                 Expires 2 September 2023                [Page 3]
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
+   *  The basic requirements in Section 2 were softened to reflect the
+      realities of the variability of search engines and web browsers.
+
    *  Changed Section 3 from "Rules for the Use of Non-ASCII Characters"
-      to "Use of Non-ASCII Characters" because the stream approving
-      bodies and the RPC have used, and should continue to use, their
-      own discretion based on what makes the RFC most useful.
+      to "Use of Non-ASCII Characters" because the RPC has used, and
+      should continue to use, their own discretion based on what makes
+      the RFC most useful.
 
    *  Language about the future was changed to the past tense to
       indicate that RFC 7997 was already implemented.  For example,
@@ -194,17 +197,17 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
       publication formats and the XML correctly in order to understand
       and implement the information described in the document.
 
-   The stream approving bodies and the RPC may reject any code point
-   that does not render adequately in commonly-used viewers.
+   The RPC may reject any code point that does not render adequately in
+   commonly-used viewers.
 
 3.  Use of Non-ASCII Characters
 
    This section describes the guidelines for the use of non-ASCII
-   characters in an RFC.  If the stream approving bodies and the RPC
-   identify areas where the use of non-ASCII characters in an RFC
-   negatively impacts the readability of the text, they can require that
-   the authors supply alternate text or change the non-ASCII characters
-   to better suit the expected readers of the RFC.
+   characters in an RFC.  If the RPC identifies areas where the use of
+   non-ASCII characters in an RFC negatively impacts the readability of
+   the text, they can require that the authors supply alternate text or
+   change the non-ASCII characters to better suit the expected readers
+   of the RFC.
 
    In general, using the "U+NNNN" syntax from [BCP137] is the suggested
    way to show Unicode code points as alternate text.
@@ -214,10 +217,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    As stated in the RFC Style Guide [RFC7322], the language of the RFC
    Series is English.
 
-   Where the use of non-ASCII characters is purely part of an example
-   and not otherwise required for correct protocol operation, giving the
-   Unicode equivalent of the non-ASCII characters is not required, but
-   it can improve the readability of the RFC.  For example, for text
+
 
 
 
@@ -226,10 +226,13 @@ Hoffman                 Expires 2 September 2023                [Page 4]
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
+   Where the use of non-ASCII characters is purely part of an example
+   and not otherwise required for correct protocol operation, giving the
+   Unicode equivalent of the non-ASCII characters is not required, but
+   it can improve the readability of the RFC.  For example, for text
    that says "The value can be followed by a monetary symbol such as ¥
-   or €", the stream approving body or the RPC might require that it
-   instead say "The value can be followed by a monetary symbol such as ¥
-   (U+00A5) or € (U+20AC)".
+   or €", the RPC might require that it instead say "The value can be
+   followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
 
    Reference entries (bibliographic text) follow the rules given
    throughout this section.
@@ -251,8 +254,8 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    When a script outside the ASCII character set is used for an
    individual name, an author-provided, ASCII-only transliteration can
    appear immediately after the non-ASCII characters, surrounded by
-   parentheses.  The stream approving bodies and the RPC decide on a
-   case-by-case basis whether to include the ASCII-only transliteration.
+   parentheses.  The RPC decides on a case-by-case basis whether to
+   include the ASCII-only transliteration.
 
    Names of authors appear at the top of RFCs and in the References
    section with a first initial (if available) and family name.  For
@@ -267,12 +270,9 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
    Company names follow the same rules as person names.
 
-3.3.  Body of the Document
 
-   When the mention of non-ASCII characters is required for correct
-   protocol operation and understanding, the characters' Unicode code
-   points must be used in the text.  This is equally true in running
-   text and tables.  The addition of each character name is encouraged.
+
+
 
 
 
@@ -281,6 +281,13 @@ Hoffman                 Expires 2 September 2023                [Page 5]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
+
+3.3.  Body of the Document
+
+   When the mention of non-ASCII characters is required for correct
+   protocol operation and understanding, the characters' Unicode code
+   points must be used in the text.  This is equally true in running
+   text and tables.  The addition of each character name is encouraged.
 
    *  Non-ASCII characters require identifying the Unicode code point,
       at least on first use in the RFC.
@@ -324,19 +331,18 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    recommended, except within a code component where one must follow the
    rules of the programming language in which the code is being written.
 
-3.4.  Keywords and Citation Tags
-
-   Keywords (as tagged with the <keyword> element in XML) and citation
-   tags (as defined in the anchor attributes of <reference> elements)
-   must contain only ASCII characters.
-
-
 
 
 Hoffman                 Expires 2 September 2023                [Page 6]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
+
+3.4.  Keywords and Citation Tags
+
+   Keywords (as tagged with the <keyword> element in XML) and citation
+   tags (as defined in the anchor attributes of <reference> elements)
+   must contain only ASCII characters.
 
    [ Does the WG still want this restriction? ]
 
@@ -377,14 +383,8 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    of readability overrides the use of non-ASCII characters within the
    text.
 
-7.  Security Considerations
 
-   Valid Unicode that matches the expected text must be verified in
-   order to preserve expected behavior and protocol information.
 
-8.  References
-
-8.1.  Normative References
 
 
 
@@ -393,6 +393,15 @@ Hoffman                 Expires 2 September 2023                [Page 7]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
+
+7.  Security Considerations
+
+   Valid Unicode that matches the expected text must be verified in
+   order to preserve expected behavior and protocol information.
+
+8.  References
+
+8.1.  Normative References
 
    [BCP137]   Klensin, J., "ASCII Escaping of Unicode Characters",
               BCP 137, RFC 5137, February 2008.
@@ -433,6 +442,14 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
               The Unicode Consortium, "Unicode Standard Annex", 2023,
               <http://www.unicode.org/reports/tr15/>.
 
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 8]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
 Author's Address
 
    Paul Hoffman
@@ -445,4 +462,43 @@ Author's Address
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hoffman                 Expires 2 September 2023                [Page 9]
