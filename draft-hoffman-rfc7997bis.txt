@@ -4,10 +4,10 @@
 
 Network Working Group                                         P. Hoffman
 Internet-Draft                                                     ICANN
-Obsoletes: 7997 (if approved)                               1 March 2023
+Obsoletes: 7997 (if approved)                               2 March 2023
 Updates: 7322 (if approved)                                             
 Intended status: Informational                                          
-Expires: 2 September 2023
+Expires: 3 September 2023
 
 
                 The Use of Non-ASCII Characters in RFCs
@@ -46,14 +46,14 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 September 2023.
+   This Internet-Draft will expire on 3 September 2023.
 
 
 
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 1]
+Hoffman                 Expires 3 September 2023                [Page 1]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 2]
+Hoffman                 Expires 3 September 2023                [Page 2]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -142,6 +142,10 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    Joe Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach,
    Alice Russo, Robert Sparks, and Dave Thaler.
 
+   This current document was greatly helped by contributions from the
+   RFC Series Working Group (RSWG), including from Brian Carpenter,
+   Carsten Bormann, Eliot Lear, John Levine, and Martin Thomson.
+
 1.2.  Changes from RFC 7997
 
    The following is an overview of the changes in this document from RFC
@@ -158,17 +162,16 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
       markup.  Clarified that names with non-Latin characters should
       have Latin transliterations.
 
-   *  The basic requirements in Section 2 were softened to reflect the
-      realities of the variability of search engines and web browsers.
 
 
 
-
-
-Hoffman                 Expires 2 September 2023                [Page 3]
+Hoffman                 Expires 3 September 2023                [Page 3]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
+
+   *  The basic requirements in Section 2 were softened to reflect the
+      realities of the variability of search engines and web browsers.
 
    *  Changed Section 3 from "Rules for the Use of Non-ASCII Characters"
       to "Use of Non-ASCII Characters" because the RPC has used, and
@@ -218,10 +221,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 
-
-
-
-Hoffman                 Expires 2 September 2023                [Page 4]
+Hoffman                 Expires 3 September 2023                [Page 4]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -277,7 +277,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 5]
+Hoffman                 Expires 3 September 2023                [Page 5]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -333,7 +333,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 6]
+Hoffman                 Expires 3 September 2023                [Page 6]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -389,7 +389,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 7]
+Hoffman                 Expires 3 September 2023                [Page 7]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -445,7 +445,7 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 8]
+Hoffman                 Expires 3 September 2023                [Page 8]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -501,4 +501,4 @@ Author's Address
 
 
 
-Hoffman                 Expires 2 September 2023                [Page 9]
+Hoffman                 Expires 3 September 2023                [Page 9]

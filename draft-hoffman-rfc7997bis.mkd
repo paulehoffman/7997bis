@@ -98,6 +98,14 @@ Nevil Brownlee, Tony Hansen, Joe
 Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach,
 Alice Russo, Robert Sparks, and Dave Thaler.
 
+This current document was greatly helped by contributions from the RFC Series Working Group (RSWG), including from
+Brian Carpenter,
+Carsten Bormann,
+Eliot Lear,
+John Levine,
+and
+Martin Thomson.
+
 ## Changes from RFC 7997
 
 The following is an overview of the changes in this document from RFC 7997:
