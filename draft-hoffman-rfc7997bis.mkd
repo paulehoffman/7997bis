@@ -200,7 +200,7 @@ Names are transliterated into Latin characters; non-ASCII characters in other bo
 When the non-ASCII characters are required for correct protocol operation and understanding,
 the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax from {{BCP137}}, at least on first use in the RFC.
 
-Use of the actual non-ASCII character (such as common math symbols like √) is encouraged so that a reader can more easily see what the character is.
+Use of the actual non-ASCII character (such as common math symbols like √ and ≤) is encouraged so that a reader can more easily see what the character is.
 This is done without adding the "U+NNNN" syntax.
 
 \[ Removed "The use of the Unicode character names like "INCREMENT" in addition to the use of Unicode code points is also encouraged."
