@@ -6,6 +6,7 @@ docname: draft-hoffman-rfc7997bis-01
 stand_alone: true
 v: 3
 obsoletes: 7997
+updates: 7322
 
 ipr: trust200902
 kw: Internet-Draft
@@ -51,8 +52,7 @@ informative:
 
 --- abstract
 
-In order to support the internationalization of protocols and a more diverse Internet community,
-the RFC Series must evolve to allow for the use of non-ASCII characters in RFCs.
+The RFC Series has evolved to allow for the use of non-ASCII characters in RFCs.
 While English remains the required language of the Series, the encoding of RFCs is now in UTF-8,
 allowing for a broader range of characters than typically used in the English language. 
 This document describes requirements and guidelines for the RFC Production Center
@@ -78,7 +78,6 @@ the increasing need for easily readable, internationalized content suggested tha
 To support this move away from ASCII, RFCs switched to supporting UTF-8 as the default character encoding
 and allowed support for a broad range of Unicode characters {{UnicodeCurrent}}. 
 
-Given the continuing goal of maximum readability across platforms, the use of non-ASCII characters in RFCs should be limited to only where necessary within the text.
 This document describes the rules under which non-ASCII characters may be used in an RFC.
 These rules will be applied as the necessary changes are made to submission checking and editorial tools.
 
@@ -120,11 +119,12 @@ their own discretion based on what makes the RFC most useful.
 
 - Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
+Also added more acknowledgement of the use of non-ASCII characters outside the narrow scope that was defined in RFC 7997.
 
 
 # Basic Requirements {#basic_requirements}
 
-Two fundamental requirements inform the guidance and examples provided in this document.  They are:
+The following fundamental requirements inform the guidance and examples provided in this document.  They are:
 
 - Searches against RFC indexes and database tables should return expected results and support appropriate Unicode string matching behaviors.
 
@@ -132,7 +132,7 @@ Two fundamental requirements inform the guidance and examples provided in this d
 People whose systems do not have the fonts needed to display a particular RFC need to be able to read the various publication formats
 and the XML correctly in order to understand and implement the information described in the document.
 
-The RPC may reject any code point that does not render adequately in commonly-used viewers.
+- As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
 
 
 # Use of Non-ASCII Characters {#uses}
@@ -145,8 +145,6 @@ In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to sh
 
 ## General Usage throughout a Document
 
-As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
-
 Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation,
 giving the Unicode equivalent of the non-ASCII characters is not required,
 but it can improve the readability of the RFC.
@@ -154,7 +152,9 @@ For example, for text that says "The value can be followed by a monetary symbol 
 the RPC might require that it instead say
 "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
 
-Reference entries (bibliographic text) follow the rules given throughout this section.
+Reference entries (bibliographic text) and tables follow the rules given in this section.
+
+\[ The text from {{body_of_document}} could be moved here and some duplication removed. \]
 
 \[ The example for this section from RFC 7997 has been removed. It was, in fact, not an example of general
 usage but instead a protocol example. \]
@@ -164,7 +164,7 @@ usage but instead a protocol example. \]
 \[ RFC 7997 was inconsistent in its rules and examples of when names with non-ASCII characters should be spelled out using all-ASCII transliteration. 
 This section is significantly updated to clarify how names with non-ASCII characters should appear in RFCs. \]
 
-Person names may appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
+Person names and company names appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
 
 When a script outside the ASCII character set is used for an individual name,
 an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
@@ -178,20 +178,16 @@ but the version with non-ASCII Latin characters also might be left just as "P. F
 In the Acknowledgements section, the person's full name is spelled out in full without the first initial,
 such as "The following people contributed to this document: 吴钦 (Qin Wu), ...".
 
-Company names follow the same rules as person names.
+It is important to note that non-ASCII characters in person and company names are treated differently than other parts of the body of a document.
+Names are transliterated into Latin chartacters; non-ASCII characters in other body text are shown with U+ encoding after the character.
 
 ## Body of the Document {#body_of_document}
 
-When the mention of non-ASCII characters is required for correct protocol operation and understanding,
-the characters' Unicode code points must be used in the text.
-This is equally true in running text and tables.
-The addition of each character name is encouraged.
+When the non-ASCII characters are required for correct protocol operation and understanding,
+the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax from {{BCP137}}, at least on first use in the RFC.
 
-- Non-ASCII characters require identifying the Unicode code point, at least on first use in the RFC.
-
-- Use of the actual UTF-8 character (such as common math symbols like √) is encouraged so that a reader can more easily see what the character is.
-
-- As stated in {{uses}}, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
+Use of the actual non-ASCII character (such as common math symbols like √) is encouraged so that a reader can more easily see what the character is.
+This is done without adding the "U+NNNN" syntax.
 
 \[ Removed "The use of the Unicode character names like "INCREMENT" in addition to the use of Unicode code points is also encouraged."
 This text was, in fact, wrong in 7997 because the character name did not match the example. \]
@@ -223,7 +219,7 @@ identifying Unicode characters and may help authors decide how to
 represent the non-ASCII characters in their documents.
 
 Code components may have different requirements for using the U+ notation.
-The use of the U+ notation in code components is recommended,
+The use of the "U+NNNN" syntax in code components is recommended,
 except within a code component where one must follow the rules of the programming language in which the code is being written.
 
 ## Keywords and Citation Tags
