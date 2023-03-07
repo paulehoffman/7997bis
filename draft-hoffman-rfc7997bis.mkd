@@ -125,7 +125,7 @@ of search engines and web browsers.
 because the RPC has used, and should continue to use,
 their own discretion based on what makes the RFC most useful.
 
-- Added the suggestion that non-ASCII characters appear in NFC.
+- Added the suggestion that non-ASCII characters generally appear in NFC.
 
 - Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
@@ -153,9 +153,10 @@ they can require that the authors supply alternate text or change the non-ASCII 
 
 In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
 
-Characters in an RFC will generally appear in Normalization Form C (NFC), which is described in {{UnicodeNorm}}
-as "canonical decomposition, followed by canonical composition".
-If the author expects a different normalization form to appear in the published RFC, that must be noted in the text of the RFC.
+Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
+If the RFC would be more corrrect and more understandable with particular characters not in NFC,
+the RPC can make an exception and use unnormalized text.
+In such a case, a text note should be included to describe why unnormalized text used.
 
 ## General Usage throughout a Document
 
