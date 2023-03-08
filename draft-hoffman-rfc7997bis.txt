@@ -4,10 +4,10 @@
 
 Network Working Group                                         P. Hoffman
 Internet-Draft                                                     ICANN
-Obsoletes: 7997 (if approved)                               2 March 2023
+Obsoletes: 7997 (if approved)                               8 March 2023
 Updates: 7322 (if approved)                                             
 Intended status: Informational                                          
-Expires: 3 September 2023
+Expires: 9 September 2023
 
 
                 The Use of Non-ASCII Characters in RFCs
@@ -46,14 +46,14 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2023.
+   This Internet-Draft will expire on 9 September 2023.
 
 
 
 
 
 
-Hoffman                 Expires 3 September 2023                [Page 1]
+Hoffman                 Expires 9 September 2023                [Page 1]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
@@ -67,10 +67,7 @@ Copyright Notice
    Provisions Relating to IETF Documents (https://trustee.ietf.org/
    license-info) in effect on the date of publication of this document.
    Please review these documents carefully, as they describe your rights
-   and restrictions with respect to this document.  Code Components
-   extracted from this document must include Revised BSD License text as
-   described in Section 4.e of the Trust Legal Provisions and are
-   provided without warranty as described in the Revised BSD License.
+   and restrictions with respect to this document.
 
 Table of Contents
 
@@ -85,12 +82,12 @@ Table of Contents
      3.4.  Keywords and Citation Tags  . . . . . . . . . . . . . . .   7
      3.5.  Authors' Address Information  . . . . . . . . . . . . . .   7
    4.  XML Markup  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-   5.  Internationalization Considerations . . . . . . . . . . . . .   7
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   5.  Internationalization Considerations . . . . . . . . . . . . .   8
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
    7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
      7.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
      7.2.  Informative References  . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   9
 
 1.  Introduction
 
@@ -102,18 +99,25 @@ Table of Contents
    ASCII is the "lowest common denominator" for character encoding,
    making cross-platform viewing trivial.
 
-   There are limits to ASCII, however, that hinder its continued use as
-   the exclusive character encoding for the Series.  At the time of the
-   publication of [RFC7997], the increasing need for easily readable,
-   internationalized content suggested that it is time to allow non-
 
 
 
-Hoffman                 Expires 3 September 2023                [Page 2]
+
+
+
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 2]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
+   There are limits to ASCII, however, that hinder its continued use as
+   the exclusive character encoding for the Series.  At the time of the
+   publication of [RFC7997], the increasing need for easily readable,
+   internationalized content suggested that it is time to allow non-
    ASCII characters in RFCs where necessary.  To support this move away
    from ASCII, RFCs switched to supporting UTF-8 as the default
    character encoding and allowed support for a broad range of Unicode
@@ -157,18 +161,18 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
       questions about the content of RFCs, the RPC can ask the RFC
       stream approving bodies for input.
 
-   *  Removed requirements of marking non-ASCII characters with XML
-      markup.  Clarified that names with non-Latin characters should
-      have Latin transliterations.
 
 
 
 
-
-Hoffman                 Expires 3 September 2023                [Page 3]
+Hoffman                 Expires 9 September 2023                [Page 3]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
+
+   *  Removed requirements of marking non-ASCII characters with XML
+      markup.  Clarified that names with non-Latin characters should
+      have Latin transliterations.
 
    *  The basic requirements in Section 2 were softened to reflect the
       realities of the variability of search engines and web browsers.
@@ -178,7 +182,8 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
       should continue to use, their own discretion based on what makes
       the RFC most useful.
 
-   *  Added the suggestion that non-ASCII characters appear in NFC.
+   *  Added the suggestion that non-ASCII characters generally appear in
+      NFC.
 
    *  Language about the future was changed to the past tense to
       indicate that RFC 7997 was already implemented.  For example,
@@ -213,24 +218,23 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    change the non-ASCII characters to better suit the expected readers
    of the RFC.
 
-   In general, using the "U+NNNN" syntax from [BCP137] is the suggested
-   way to show Unicode code points as alternate text.
 
 
 
-
-
-
-Hoffman                 Expires 3 September 2023                [Page 4]
+Hoffman                 Expires 9 September 2023                [Page 4]
 
 Internet-Draft              Non-ASCII in RFCs                 March 2023
 
 
+   In general, using the "U+NNNN" syntax from [BCP137] is the suggested
+   way to show Unicode code points as alternate text.
+
    Characters in an RFC will generally appear in Normalization Form C
-   (NFC), which is described in [UnicodeNorm] as "canonical
-   decomposition, followed by canonical composition".  If the author
-   expects a different normalization form to appear in the published
-   RFC, that must be noted in the text of the RFC.
+   (NFC) as defined in [UnicodeNorm].  If the RFC would be more corrrect
+   and more understandable with particular characters not in NFC, the
+   RPC can make an exception and use unnormalized text.  In such a case,
+   a text note should be included to describe why unnormalized text
+   used.
 
 3.1.  General Usage throughout a Document
 
@@ -268,19 +272,22 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    parentheses.  The RPC decides on a case-by-case basis whether to
    include the ASCII-only transliteration.
 
+
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 5]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
    Names of authors appear at the top of RFCs and in the References
    section with a first initial (if available) and family name.  For
    example, Qin Wu's name might appear as "吴钦 (Q.  Wu)".  As another
    example, Patrik Fältström's name might appear as "P.  Fältström (P.
    Faltstrom)", but the version with non-ASCII Latin characters also
    might be left just as "P.  Fältström".
-
-
-
-Hoffman                 Expires 3 September 2023                [Page 5]
-
-Internet-Draft              Non-ASCII in RFCs                 March 2023
-
 
    In the Acknowledgements section, the person's full name is spelled
    out in full without the first initial, such as "The following people
@@ -319,6 +326,18 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
    This could be replaced with:
 
+
+
+
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 6]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
    However, the problem is made more serious by introducing the full
    range of Unicode code points into protocol strings.  For example,
    the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA
@@ -329,14 +348,6 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    [BCP137] describes the pros and cons of different options for
    identifying Unicode characters and may help authors decide how to
    represent the non-ASCII characters in their documents.
-
-
-
-
-Hoffman                 Expires 3 September 2023                [Page 6]
-
-Internet-Draft              Non-ASCII in RFCs                 March 2023
-
 
    Code components may have different requirements for using the U+
    notation.  The use of the "U+NNNN" syntax in code components is
@@ -374,6 +385,15 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
    ASCII alternative is required.  See [RFC7991] for more detail on how
    to tag ASCII alternatives.
 
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 7]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
 5.  Internationalization Considerations
 
    The ability to use non-ASCII characters in RFCs in a clear and
@@ -386,13 +406,6 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
 
    Valid Unicode that matches the expected text must be verified in
    order to preserve expected behavior and protocol information.
-
-
-
-Hoffman                 Expires 3 September 2023                [Page 7]
-
-Internet-Draft              Non-ASCII in RFCs                 March 2023
-
 
 7.  References
 
@@ -427,6 +440,16 @@ Internet-Draft              Non-ASCII in RFCs                 March 2023
               DOI 10.17487/RFC7322, September 2014,
               <https://www.rfc-editor.org/rfc/rfc7322>.
 
+
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 8]
+
+Internet-Draft              Non-ASCII in RFCs                 March 2023
+
+
    [RFC7564]  Saint-Andre, P. and M. Blanchet, "PRECIS Framework:
               Preparation, Enforcement, and Comparison of
               Internationalized Strings in Application Protocols",
@@ -445,4 +468,37 @@ Author's Address
 
 
 
-Hoffman                 Expires 3 September 2023                [Page 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hoffman                 Expires 9 September 2023                [Page 9]

@@ -11,8 +11,7 @@ updates: 7322
 ipr: trust200902
 kw: Internet-Draft
 cat: info
-consensus: true
-submissionType: IETF
+submissionType: editorial
 
 pi:
   toc: yes
