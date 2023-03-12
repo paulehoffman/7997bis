@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-hoffman-rfc7997bis-01
+docname: draft-hoffman-rfc7997bis-02
 
 stand_alone: true
 v: 3
@@ -130,8 +130,10 @@ their own discretion based on what makes the RFC most useful.
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
 Also added more acknowledgement of the use of non-ASCII characters outside the narrow scope that was defined in RFC 7997.
 
+- Greatly rearranged and simplified the text about person, company, and postal names.
 
-# Basic Requirements {#basic_requirements}
+
+# Basic Requirements for Non-ASCII Text in RFCs {#basic_requirements}
 
 The following fundamental requirements inform the guidance and examples provided in this document.  They are:
 
@@ -144,7 +146,7 @@ and the XML correctly in order to understand and implement the information descr
 - As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
 
 
-# Use of Non-ASCII Characters {#uses}
+# Use of Non-ASCII Text in RFCs {#uses}
 
 This section describes the guidelines for the use of non-ASCII characters in an RFC.
 If the RPC identifies areas where the use of non-ASCII characters in an RFC negatively impacts the readability of the text,
@@ -153,11 +155,17 @@ they can require that the authors supply alternate text or change the non-ASCII 
 In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
 
 Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
-If the RFC would be more corrrect and more understandable with particular characters not in NFC,
+If the RFC would be more correct and more understandable with particular characters not in NFC,
 the RPC can make an exception and use unnormalized text.
 In such a case, a text note should be included to describe why unnormalized text used.
 
-## General Usage throughout a Document
+Non-ASCII text in person, company, and postal names are covered later in {{person_company_id}}.
+
+When the non-ASCII characters are required for correct protocol operation and understanding,
+the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax from {{BCP137}}, at least on first use in the RFC.
+{{BCP137}} describes the pros and cons of different options for
+identifying Unicode characters and may help authors decide how to
+represent the non-ASCII characters in their documents.
 
 Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation,
 giving the Unicode equivalent of the non-ASCII characters is not required,
@@ -166,47 +174,13 @@ For example, for text that says "The value can be followed by a monetary symbol 
 the RPC might require that it instead say
 "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
 
-Reference entries (bibliographic text) and tables follow the rules given in this section.
-
-\[ The text from {{body_of_document}} could be moved here and some duplication removed. \]
-
-\[ The example for this section from RFC 7997 has been removed. It was, in fact, not an example of general
-usage but instead a protocol example. \]
-
-## Person and Company Names
-
-\[ RFC 7997 was inconsistent in its rules and examples of when names with non-ASCII characters should be spelled out using all-ASCII transliteration. 
-This section is significantly updated to clarify how names with non-ASCII characters should appear in RFCs. \]
-
-Person names and company names appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
-
-When a script outside the ASCII character set is used for an individual name,
-an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
-The RPC decides on a case-by-case basis whether to include the ASCII-only transliteration.
-
-Names of authors appear at the top of RFCs and in the References section with a first initial (if available) and family name.
-For example, Qin Wu's name might appear as "吴钦 (Q. Wu)".
-As another example, Patrik Fältström's name might appear as "P. Fältström (P. Faltstrom)",
-but the version with non-ASCII Latin characters also might be left just as "P. Fältström".
-
-In the Acknowledgements section, the person's full name is spelled out in full without the first initial,
-such as "The following people contributed to this document: 吴钦 (Qin Wu), ...".
-
-It is important to note that non-ASCII characters in person and company names are treated differently than other parts of the body of a document.
-Names are transliterated into Latin characters; non-ASCII characters in other body text are shown with U+ encoding after the character.
-
-## Body of the Document {#body_of_document}
-
-When the non-ASCII characters are required for correct protocol operation and understanding,
-the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax from {{BCP137}}, at least on first use in the RFC.
-
 Use of the actual non-ASCII character (such as common math symbols like √ and ≤) is encouraged so that a reader can more easily see what the character is.
 This is done without adding the "U+NNNN" syntax.
 
 \[ Removed "The use of the Unicode character names like "INCREMENT" in addition to the use of Unicode code points is also encouraged."
 This text was, in fact, wrong in 7997 because the character name did not match the example. \]
 
-For example, {{RFC7564}} says:
+As another example, {{RFC7564}} says:
 
 ~~~
 However, the problem is made more serious by introducing the full
@@ -228,30 +202,42 @@ look similar to the ASCII characters "STPETER" as they might
 appear when presented using a "creative" font family.
 ~~~
 
-{{BCP137}} describes the pros and cons of different options for
-identifying Unicode characters and may help authors decide how to
-represent the non-ASCII characters in their documents.
-
 Code components may have different requirements for using the U+ notation.
 The use of the "U+NNNN" syntax in code components is recommended,
 except within a code component where one must follow the rules of the programming language in which the code is being written.
 
-## Keywords and Citation Tags
+## Person and Company Identification {#person_company_id}
 
-Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements)
-must contain only ASCII characters.
+\[ RFC 7997 was inconsistent in its rules and examples of when names with non-ASCII characters should be spelled out using all-ASCII transliteration. 
+This section is significantly updated to clarify how names with non-ASCII characters should appear in RFCs. \]
 
-\[ Does the WG still want this restriction? \]
+Person names and company names appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
+It is important to note that non-ASCII characters in person and company names are treated differently than other parts of the body of a document.
+Names are transliterated into Latin characters; non-ASCII characters in other body text are shown with U+ encoding after the character.
 
-## Authors' Address Information
+When a script outside the ASCII character set is used for an individual name,
+an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
+The RPC decides on a case-by-case basis whether to include the ASCII-only transliteration.
 
-The purpose of providing authors' address information, either postal or email,
-is to assist readers of an RFC in contacting the author or authors.
-Authors may include the official postal address as recognized by
-their company or local postal service without additional Unicode character identification.
+Names of authors appear at the top of RFCs and in the References section with a first initial (if available) and family name.
+For example, Qin Wu's name might appear as "吴钦 (Q. Wu)".
+As another example, Patrik Fältström's name might appear as "P. Fältström (P. Faltstrom)",
+but the version with non-ASCII Latin characters also might be left just as "P. Fältström".
+
+In the Acknowledgements section, the person's full name is spelled out in full without the first initial,
+such as "The following people contributed to this document: 吴钦 (Qin Wu), ...".
+
+Postal addresses may be used without additional Unicode character identification.
 
 If an author's email address includes non-ASCII characters and is a valid email address at the time of publication,
 it may be given without additional Unicode character identification.
+
+## Keywords and Citation Tags
+
+\[ Does the WG still want the following restriction? \]
+
+Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements)
+must contain only ASCII characters.
 
 
 # XML Markup
