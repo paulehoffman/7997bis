@@ -165,7 +165,7 @@ In such a case, a text note should be included to describe why unnormalized text
 Non-ASCII text in person, company, and postal names are covered later in {{person_company_id}}.
 
 When the non-ASCII characters are required for correct protocol operation and understanding,
-the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax from {{BCP137}}, at least on first use in the RFC.
+the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax, at least on first use in the RFC.
 {{BCP137}} describes the pros and cons of different options for
 identifying Unicode characters and may help authors decide how to
 represent the non-ASCII characters in their documents.
@@ -216,7 +216,7 @@ This section is significantly updated to clarify how names with non-ASCII charac
 
 Person names and company names appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
 It is important to note that non-ASCII characters in person and company names are treated differently than other parts of the body of a document.
-Names are transliterated into Latin characters; non-ASCII characters in other body text are shown with U+ encoding after the character.
+Names are transliterated into Latin characters; non-ASCII characters in other body text are shown with the "U+NNNN" syntax after the character.
 
 When a script outside the ASCII character set is used for an individual name,
 an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
