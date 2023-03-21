@@ -205,7 +205,7 @@ look similar to the ASCII characters "STPETER" as they might
 appear when presented using a "creative" font family.
 ~~~
 
-Code components may have different requirements for using the U+ notation.
+Code components may have different requirements for using the "U+NNNN" syntax.
 The use of the "U+NNNN" syntax in code components is recommended,
 except within a code component where one must follow the rules of the programming language in which the code is being written.
 
