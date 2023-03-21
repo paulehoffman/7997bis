@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-hoffman-rfc7997bis-02
+docname: draft-hoffman-rfc7997bis-03
 
 stand_alone: true
 v: 3
@@ -115,7 +115,10 @@ In short, all responsibilities that were held by the RFC Editor in RFC 7997 are 
 If the RPC has questions about the content of RFCs, the RPC can ask the RFC stream approving bodies for input.
 
 - Removed requirements of marking non-ASCII characters with XML markup.
-Clarified that names with non-Latin characters should have Latin transliterations.
+Clarified that person and names with non-Latin characters should have Latin transliterations.
+
+- Removed the suggestion that character names for non-ASCII characters be included,
+instead relying on the "U+NNNN" syntax from {{BCP137}}.
 
 - The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability
 of search engines and web browsers.
