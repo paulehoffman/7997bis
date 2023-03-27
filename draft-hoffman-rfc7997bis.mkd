@@ -110,9 +110,9 @@ Martin Thomson.
 The following is an overview of the changes in this document from RFC 7997:
 
 - Added the role of the RFC stream approving bodies and the RFC Production Center (RPC)
-as described in {{RFC9280}} throughout the document.
-In short, all responsibilities that were held by the RFC Editor in RFC 7997 are handled by the RPC.
-If the RPC has questions about the content of RFCs, the RPC can ask the RFC stream approving bodies for input.
+as described in {{RFC9280}}.
+All responsibilities that were held by the RFC Editor in RFC 7997 are handled by the RPC.
+When the RPC has questions about the content of RFCs, the RPC asks the RFC stream approving bodies for input.
 
 - Removed requirements of marking non-ASCII characters with XML markup.
 Clarified that person and names with non-Latin characters should have Latin transliterations.
@@ -120,14 +120,14 @@ Clarified that person and names with non-Latin characters should have Latin tran
 - Removed the suggestion that character names for non-ASCII characters be included,
 instead relying on the "U+NNNN" syntax from {{BCP137}}.
 
+- Added the suggestion that non-ASCII characters generally appear in NFC.
+
 - The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability
 of search engines and web browsers.
 
 - Changed {{uses}} from "Rules for the Use of Non-ASCII Characters" to "Use of Non-ASCII Characters"
 because the RPC has used, and should continue to use,
 their own discretion based on what makes the RFC most useful.
-
-- Added the suggestion that non-ASCII characters generally appear in NFC.
 
 - Language about the future was changed to the past tense to indicate that RFC 7997 was already implemented.
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
@@ -154,6 +154,7 @@ and the XML correctly in order to understand and implement the information descr
 This section describes the guidelines for the use of non-ASCII characters in an RFC.
 If the RPC identifies areas where the use of non-ASCII characters in an RFC negatively impacts the readability of the text,
 they can require that the authors supply alternate text or change the non-ASCII characters to better suit the expected readers of the RFC.
+When the RPC has questions about the content of RFCs, the RPC asks the RFC stream approving bodies for input.
 
 In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
 
