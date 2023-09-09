@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-hoffman-rfc7997bis-04
+docname: draft-rswg-rfc7997bis-00
 
 stand_alone: true
 v: 3
@@ -60,7 +60,7 @@ regarding the use of non-ASCII characters in RFCs.
 This document updates RFC 7997 to reflect changes in the practices of the RFC series since RFC 7997 was published,
 and makes further changes based on agreements in the IETF community about what characters are allowed in RFCs.
 
-\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]
+\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis){:target="_blank"}. \]
 
 --- middle
 
@@ -200,10 +200,10 @@ This could be replaced with:
 ~~~
 However, the problem is made more serious by introducing the full
 range of Unicode code points into protocol strings.  For example,
-the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA
-U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2) from the Cherokee block
-look similar to the ASCII characters "STPETER" as they might
-appear when presented using a "creative" font family.
+the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA U+13A2 U+13B5 U+13AC U+13A2
+U+13AC U+13D2) from the Cherokee block look similar to the ASCII
+characters "STPETER" as they might appear when presented using a
+"creative" font family.
 ~~~
 
 Code components may have different requirements for using the "U+NNNN" syntax.
