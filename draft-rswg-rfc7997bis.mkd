@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-rswg-rfc7997bis-00
+docname: draft-rswg-rfc7997bis-01
 
 stand_alone: true
 v: 3
@@ -24,6 +24,11 @@ author:
    name: Paul Hoffman
    org: ICANN
    email: paul.hoffman@icann.org
+ -
+   ins: H. Flanagan
+   name: Heather Flanagan
+   org: Spherical Cow Consulting
+   email: hlf@sphericalcowconsulting.com
 
 normative:
   BCP137:
