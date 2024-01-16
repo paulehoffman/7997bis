@@ -102,6 +102,8 @@ Clarified that person and names with non-Latin characters should have Latin tran
 
 - Added the suggestion that non-ASCII characters generally appear in NFC.
 
+- Added that Non-ASCII text can appear in any part of an RFC.
+
 - The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability of search engines and web browsers.
 
 - Changed {{uses}} from "Rules for the Use of Non-ASCII Characters" to "Use of Non-ASCII Characters" because the RPC has used, and should continue to use, their own discretion based on what makes the RFC most useful.
@@ -138,6 +140,7 @@ Characters in an RFC will generally appear in Normalization Form C (NFC) as defi
 If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can make an exception and use unnormalized text.
 In such a case, a text note should be included to describe why unnormalized text used.
 
+Non-ASCII text can appear in any part of an RFC, such as headings, running text, and artwork.
 Non-ASCII text in person, company, and postal names are covered later in {{person_company_id}}.
 
 When the non-ASCII characters are required for correct protocol operation and understanding, the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax, at least on first use in the RFC.
