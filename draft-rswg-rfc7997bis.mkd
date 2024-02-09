@@ -198,9 +198,12 @@ If an author's email address includes non-ASCII characters and is a valid email 
 
 ## Keywords and Citation Tags
 
-\[\[ Does the WG still want the following restriction? \]\]
+Keywords (as tagged with the &lt;keyword&gt; element in XML) may contain non-ASCII characters.
+Because the language of the RFC Series is English, the keywords for an RFC are likely to be mostly in English as well.
+Non-ASCII keywords can have parallel ASCII equivalents in order to make searching more effective.
 
-Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) must contain only ASCII characters.
+Citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) may contain non-ASCII characters if doing so make the citation tag more useful to the reader.
+The RPC should prevent the use of characters in citation tags that make RFCs difficult to read, such as characters with right-to-left orientation.
 
 
 # XML Markup
