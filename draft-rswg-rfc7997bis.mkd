@@ -112,6 +112,8 @@ Clarified that person and names with non-Latin characters should have Latin tran
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
 Also added more acknowledgement of the use of non-ASCII characters outside the narrow scope that was defined in {{RFC7997}}.
 
+- Updated the requirements on keywords and citation tags.
+
 - Greatly rearranged and simplified the text about person, company, and postal names.
 
 
