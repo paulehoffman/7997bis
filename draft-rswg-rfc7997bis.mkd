@@ -114,6 +114,8 @@ Also added more acknowledgement of the use of non-ASCII characters outside the n
 
 - Greatly rearranged and simplified the text about person, company, and postal names.
 
+- Added text about non-breaking spaces and hypens.
+
 
 # Basic Requirements for Non-ASCII Text in RFCs {#basic_requirements}
 
@@ -202,6 +204,11 @@ If an author's email address includes non-ASCII characters and is a valid email 
 
 Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) must contain only ASCII characters.
 
+
+## Non-breaking Spaces and Hyphens
+
+Non-breaking space characters (U+00A0) and non-breaking hyphen characters (U+2011) make searching for words and phrases in published RFC more difficult.
+Therefore they should be used sparingly in RFCs.
 
 # XML Markup
 
