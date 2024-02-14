@@ -1,7 +1,7 @@
 ---
 title: The Use of Non-ASCII Characters in RFCs
 abbrev: Non-ASCII in RFCs
-docname: draft-rswg-rfc7997bis-01
+docname: draft-rswg-rfc7997bis-02
 
 stand_alone: true
 v: 3
