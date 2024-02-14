@@ -112,6 +112,8 @@ Clarified that person and names with non-Latin characters should have Latin tran
 For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
 Also added more acknowledgement of the use of non-ASCII characters outside the narrow scope that was defined in {{RFC7997}}.
 
+- Updated the requirements on keywords and citation tags.
+
 - Greatly rearranged and simplified the text about person, company, and postal names.
 
 - Added text about non-breaking spaces and hypens.
@@ -200,9 +202,12 @@ If an author's email address includes non-ASCII characters and is a valid email 
 
 ## Keywords and Citation Tags
 
-\[\[ Does the WG still want the following restriction? \]\]
+Keywords (as tagged with the &lt;keyword&gt; element in XML) may contain non-ASCII characters.
+Because the language of the RFC Series is English, the keywords for an RFC are likely to be mostly in English as well.
+Non-ASCII keywords can have parallel ASCII equivalents in order to make searching more effective.
 
-Keywords (as tagged with the &lt;keyword&gt; element in XML) and citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) must contain only ASCII characters.
+Citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) may contain non-ASCII characters if doing so make the citation tag more useful to the reader.
+The RPC should prevent the use of characters in citation tags that make RFCs difficult to read, such as characters with right-to-left orientation.
 
 
 ## Non-breaking Spaces and Hyphens
