@@ -229,6 +229,10 @@ See {{RFC7991}} for more detail on how to tag ASCII alternatives.
 The ability to use non-ASCII characters in RFCs in a clear and consistent manner improves the ability to describe internationalized protocols and recognizes the diversity of authors.
 However, the goal of readability overrides the use of non-ASCII characters within the text.
 
+# IANA Considerations
+
+This document contains no IANA considerations.
+
 # Security Considerations
 
 Valid Unicode that matches the expected text must be verified in order to preserve expected behavior and protocol information.
