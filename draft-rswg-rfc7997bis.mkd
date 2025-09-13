@@ -1,7 +1,7 @@
 ---
-title: The Use of Non-ASCII Characters in RFCs
-abbrev: Non-ASCII in RFCs
-docname: draft-rswg-rfc7997bis-03
+title: Text in RFCs
+abbrev: Text in RFCs
+docname: draft-rswg-rfc7997bis-04
 
 stand_alone: true
 v: 3
@@ -22,14 +22,13 @@ author:
  -
    ins: P. Hoffman
    name: Paul Hoffman
-   org: ICANN
    email: paul.hoffman@icann.org
 
 normative:
   BCP137:
-  RFC7991:
+  STD63:
   RFC7997:
-  RFC9280:
+  RFC9720:
   UnicodeCurrent:
     title: The Unicode Standard
     author:
@@ -39,8 +38,8 @@ normative:
 
 informative:
   RFC20:
+  RFC6365:
   RFC7322:
-  RFC7564:
   UnicodeNorm:
     title: Unicode Standard Annex #15: Unicode Normalization Form
     author:
@@ -48,15 +47,16 @@ informative:
     target: http://www.unicode.org/reports/tr15/
     date: 2023
 
-
 --- abstract
 
-The RFC Series has evolved to allow for the use of non-ASCII characters in RFCs.
-While English remains the required language of the Series, the encoding of RFCs is now in UTF-8, allowing for a broader range of characters than typically used in the English language. 
-This document describes requirements and guidelines for the RFC Editor regarding the use of non-ASCII characters in RFCs.
+The early policy for the RFC Series was that RFCs could only contain characters from the ASCII character set.
+Later policy, from RFC 7997, allowed more characters and enforced an encoding for RFCs of UTF-8.
+Since RFC 7997 was published, the IETF community has had much more experience of using non-ASCII characters in RFCs.
 
-This document obsoletes RFC 7997.
-The differences reflect changes in the practices of the RFC series since RFC 7997 was published, and makes further changes based on agreements in the IETF community about what characters are allowed in RFCs.
+The policy for the RFC Series is that all displayable text is allowed as long as the reader of an RFC can interpret that text.
+This policy does not change language policy of the RFC Series, namely that English is the required language for the series.
+
+This document obsoletes RFC 7997 and updates the RFC Style Guide (RFC 7322).
 
 \[\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]\]
 
@@ -64,165 +64,66 @@ The differences reflect changes in the practices of the RFC series since RFC 799
 
 # Introduction
 
-For much of the history of the RFC Series, the character encoding used for RFCs has been ASCII {{RFC20}}.
-This was a sensible choice at the time: the language of the Series has always been English,
-a language that primarily uses ASCII-encoded characters (ignoring for a moment words borrowed from more richly decorated alphabets);
-and, ASCII is the "lowest common denominator" for character encoding, making cross-platform viewing trivial.
+This document sets policy for the inclusion of characters in the definitive versions and publication formats of RFCs.
+It also reaffirms the policy that the encoding format for the RFC Series is UTF-8, {{STD63}}.
+This document obsoletes {{RFC7997}} and updates the RFC Style Guide {{RFC7322}}.
+This document makes substantial changes to the policies in {{RFC7997}} based on the positive experience since its publication.
 
-There are limits to ASCII, however, that hinder its continued use as the exclusive character encoding for the Series. 
-At the time of the publication of {{RFC7997}},
-the increasing need for easily readable, internationalized content suggested that it is time to allow non-ASCII characters in RFCs where necessary.
-To support this move away from ASCII, RFCs switched to supporting UTF-8 as the default character encoding
-and allowed support for a broad range of Unicode characters {{UnicodeCurrent}}. 
+The RFC Publication Center (RPC) is responsible for implementing the policies in this document, as described in {{RFC9720}}.
 
-This document describes the rules under which non-ASCII characters may be used in an RFC.
-These rules will be applied as the necessary changes are made to submission checking and editorial tools.
+## Terminology
 
-This document updates the RFC Style Guide {{RFC7322}}.
+The term "non-ASCII characters" means characters outside the set that was defined in ASCII.
+ASCII is described in {{RFC20}}.
 
-The details included in this document are expected to change based on experience gained in publishing new RFCs.
+The term "Unicode characters" means characters define in {{UnicodeCurrent}}.
 
-## Changes from RFC 7997
+More terminology about characters and encoding formats can be found in {{RFC6365}}.
 
-The following is an overview of the changes in this document from {{RFC7997}}:
+# Basic Requirements for Text in RFCs {#basic_requirements}
 
-- Added the role of the RFC stream approving bodies and the RFC Production Center (RPC) as described in {{RFC9280}}.
-All responsibilities that were held by the RFC Editor in {{RFC7997}} are handled by the RPC.
-When the RPC has questions about the content of RFCs, the RPC asks the RFC stream approving bodies for input.
+RFCs should be displayed correctly across a wide range of readers and browsers.
+People whose systems do not have the fonts needed to display part of a particular RFC still need to be able to read the definitive versions and publication formats correctly in order to understand and implement the information described in the document.
 
-- Removed requirements of marking non-ASCII characters with XML markup.
-Clarified that person and names with non-Latin characters should have Latin transliterations.
+As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
 
-- Removed the suggestion that character names for non-ASCII characters be included, instead relying on the "U+NNNN" syntax from {{BCP137}}.
+Searches whose results might include RFCs should return accurate results and support appropriate Unicode string matching behaviors.
 
-- Added the suggestion that non-ASCII characters generally appear in NFC.
+# Policy for Text in RFCs
 
-- Added that Non-ASCII text can appear in any part of an RFC.
+The policy for the RFC Series is that all displayable text is allowed as long as the reader of an RFC can interpret that text.
 
-- The basic requirements in {{basic_requirements}} were softened to reflect the realities of the variability of search engines and web browsers.
+There are many Unicode characters that obviously cannot be displayed (such as control characters), and many whose ability to be displayed is debatable.
+If an RFC includes such characters in normative or descriptive text, the RFC needs to also clearly describe the character.
 
-- Changed {{uses}} from "Rules for the Use of Non-ASCII Characters" to "Use of Non-ASCII Characters" because the RPC has used, and should continue to use, their own discretion based on what makes the RFC most useful.
-
-- Language about the future was changed to the past tense to indicate that {{RFC7997}} was already implemented.
-For example, "RFCs will switch" was changed to to "RFCs switched", and so on.
-Also added more acknowledgement of the use of non-ASCII characters outside the narrow scope that was defined in {{RFC7997}}.
-
-- Updated the requirements on keywords and citation tags.
-
-- Greatly rearranged and simplified the text about person, company, and postal names.
-
-- Added text about non-breaking spaces and hypens.
-
-
-# Basic Requirements for Non-ASCII Text in RFCs {#basic_requirements}
-
-The following fundamental requirements inform the guidance and examples provided in this document.  They are:
-
-- Searches against RFC indexes and database tables should return expected results and support appropriate Unicode string matching behaviors.
-
-- RFCs should be displayed correctly across a wide range of readers and browsers.
-People whose systems do not have the fonts needed to display a particular RFC need to be able to read the various publication formats and the XML correctly in order to understand and implement the information described in the document.
-
-- As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
-
-
-# Use of Non-ASCII Text in RFCs {#uses}
-
-This section describes the guidelines for the use of non-ASCII characters in an RFC.
-If the RPC identifies areas where the use of non-ASCII characters in an RFC negatively impacts the readability of the text, they can require that the authors supply alternate text or change the non-ASCII characters to better suit the expected readers of the RFC.
-When the RPC has questions about non-ASCII text in RFCs, the RPC can ask the RFC stream approving bodies for input.
-The RPC can also consult the RSAB and the RSWG on such matters.
-
-In general, using the "U+NNNN" syntax from {{BCP137}} is the suggested way to show Unicode code points as alternate text.
-
-Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
-If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can make an exception and use unnormalized text.
-In such a case, a text note should be included to describe why unnormalized text used.
-
-Non-ASCII text can appear in any part of an RFC, such as headings, running text, and artwork.
-Non-ASCII text in person, company, and postal names are covered later in {{person_company_id}}.
-
-When the non-ASCII characters are required for correct protocol operation and understanding, the characters' Unicode code points should also appear in the text in the "U+NNNN" syntax, at least on first use in the RFC.
+The preferred method for describing such characters is using the "U+NNNN" syntax from {{BCP137}}.
 {{BCP137}} describes the pros and cons of different options for identifying Unicode characters and may help authors decide how to represent the non-ASCII characters in their documents.
 
+Note that this policy only applies to normative or descriptive text; text such as names does not need character description.
+Further, some RFC authors might choose to use something other than the "U+NNNN" syntax to describing characters, such as if the RFC already covers a different syntax that the reader will understand from the rest of the RFC.
+
+Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
+If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can use unnormalized text.
+In such a case, a text note should be included to describe why unnormalized text was used.
+
+## Names
+
+Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed based on their lived experiences.
+These authors can give their names using only ASCII characters, or as Unicode characters and an ASCII interpretation of their name.
+The RPC policy should be that authors' preferences for display of their names be honored.
+
+Company names and geographic names generally do not need ASCII interpretations, but they can be included at the discretion of the author and the RPC.
+
+## Examples
+
 Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation, giving the Unicode equivalent of the non-ASCII characters is not required, but it can improve the readability of the RFC.
-For example, for text that says "The value can be followed by a monetary symbol such as ¥ or €", the RPC might require that it instead say "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
+For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", it is likely more beneficial to the reader to instead say "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
 
-Use of the actual non-ASCII character (such as common math symbols like √ and ≤) is encouraged so that a reader can more easily see what the character is.
-This is done without adding the "U+NNNN" syntax.
-
-As another example, {{RFC7564}} says:
-
-~~~
-However, the problem is made more serious by introducing the full
-range of Unicode code points into protocol strings.  For example,
-the characters U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 from
-the Cherokee block look similar to the ASCII characters
-"STPETER" as they might appear when presented using a "creative"
-font family.
-~~~
-
-This could be replaced with:
-
-~~~
-However, the problem is made more serious by introducing the full
-range of Unicode code points into protocol strings.  For example,
-the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA U+13A2 U+13B5 U+13AC U+13A2
-U+13AC U+13D2) from the Cherokee block look similar to the ASCII
-characters "STPETER" as they might appear when presented using a
-"creative" font family.
-~~~
-
-Code components may have different requirements for using the "U+NNNN" syntax.
-The use of the "U+NNNN" syntax in code components is recommended, except within a code component where one must follow the rules of the programming language in which the code is being written.
-
-## Person and Company Identification {#person_company_id}
-
-Person names and company names appear in several places within an RFC (e.g., the header, Acknowledgements, and References).
-It is important to note that non-ASCII characters in person and company names are treated differently than other parts of the body of a document.
-Names are often transliterated into Latin characters; non-ASCII characters in other body text are shown with the "U+NNNN" syntax after the character.
-
-When a script outside the ASCII character set is used for an individual name, an author-provided, ASCII-only transliteration can appear immediately after the non-ASCII characters, surrounded by parentheses.
-The RPC decides on a case-by-case basis whether to include the ASCII-only transliteration.
-
-Names of authors appear at the top of RFCs and in the References section with a first initial (if available) and family name.
-For example, Qin Wu's name might appear as "吴钦 (Q. Wu)".
-As another example, Patrik Fältström's name might appear as "P. Fältström (P. Faltstrom)", but the version with non-ASCII Latin characters also might be left just as "P. Fältström".
-
-In the Acknowledgements section, the person's full name is spelled out in full without the first initial, such as "The following people contributed to this document: 吴钦 (Qin Wu), ...".
-
-Postal addresses may be used without additional Unicode character identification.
-
-If an author's email address includes non-ASCII characters and is a valid email address at the time of publication, it may be given without additional Unicode character identification.
-
-## Keywords and Citation Tags
-
-Keywords (as tagged with the &lt;keyword&gt; element in XML) may contain non-ASCII characters.
-Because the language of the RFC Series is English, the keywords for an RFC are likely to be mostly in English as well.
-Non-ASCII keywords can have parallel ASCII equivalents in order to make searching more effective.
-
-Citation tags (as defined in the anchor attributes of &lt;reference&gt; elements) may contain non-ASCII characters if doing so make the citation tag more useful to the reader.
-The RPC should prevent the use of characters in citation tags that make RFCs difficult to read, such as characters with right-to-left orientation.
-
-
-## Non-breaking Spaces and Hyphens
-
-Non-breaking space characters (U+00A0) and non-breaking hyphen characters (U+2011) make searching for words and phrases in published RFC more difficult.
-Therefore they should be used sparingly in RFCs.
-
-# XML Markup
-
-\[\[ This section needs revision after community discussion \]\]
-
-As described above, use of non-ASCII characters in areas such as email, company name, address, and name is allowed.
-In order to make it easier for code to identify the appropriate ASCII alternatives, authors must include an "ascii" attribute to their XML markup when an ASCII alternative is required.
-See {{RFC7991}} for more detail on how to tag ASCII alternatives.
-
-
-# Internationalization Considerations
-
-The ability to use non-ASCII characters in RFCs in a clear and consistent manner improves the ability to describe internationalized protocols and recognizes the diversity of authors.
-However, the goal of readability overrides the use of non-ASCII characters within the text.
+RFCs are often displayed on systems that use only black and white, particularly when printed.
+Because of this, examples should generally use characters that do not specify a color.
+However, some examples might require text with color due to the nature of the examples.
+If so, those examples need to also include the "U+NNNN" syntax.
+For example, "A color display should be able to differentiate 🔴 (U+1F534), 🟢 (U+1F7E2), and 🔵 (U+1F535)."
 
 # IANA Considerations
 
@@ -252,4 +153,3 @@ Eliot Lear,
 John Levine,
 and
 Martin Thomson.
-
