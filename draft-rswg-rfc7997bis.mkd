@@ -1,12 +1,11 @@
 ---
 title: Text in RFCs
 abbrev: Text in RFCs
-docname: draft-rswg-rfc7997bis-04
+docname: draft-rswg-rfc7997bis-05
 
 stand_alone: true
 v: 3
 obsoletes: 7997
-updates: 7322
 
 ipr: trust200902
 kw: Internet-Draft
@@ -56,7 +55,7 @@ Since RFC 7997 was published, the IETF community has had much more experience of
 The policy for the RFC Series is that all displayable text is allowed as long as the reader of an RFC can interpret that text.
 This policy does not change language policy of the RFC Series, namely that English is the required language for the series.
 
-This document obsoletes RFC 7997 and updates the RFC Style Guide (RFC 7322).
+This document obsoletes RFC 7997.
 
 \[\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]\]
 
@@ -66,7 +65,7 @@ This document obsoletes RFC 7997 and updates the RFC Style Guide (RFC 7322).
 
 This document sets policy for the inclusion of characters in the definitive versions and publication formats of RFCs.
 It also reaffirms the policy that the encoding format for the RFC Series is UTF-8, {{STD63}}.
-This document obsoletes {{RFC7997}} and updates the RFC Style Guide {{RFC7322}}.
+This document obsoletes {{RFC7997}}.
 This document makes substantial changes to the policies in {{RFC7997}} based on the positive experience since its publication.
 
 The RFC Publication Center (RPC) is responsible for implementing the policies in this document, as described in {{RFC9720}}.
