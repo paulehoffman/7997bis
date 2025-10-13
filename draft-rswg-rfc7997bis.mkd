@@ -53,8 +53,6 @@ Later policy, from RFC 7997, allowed more characters and enforced an encoding fo
 Since RFC 7997 was published, the IETF community has had much more experience of using non-ASCII characters in RFCs.
 
 The policy for the RFC Series is that all displayable text is allowed as long as the reader of an RFC can interpret that text.
-This policy does not change language policy of the RFC Series, namely that English is the required language for the series.
-
 This document obsoletes RFC 7997.
 
 \[\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]\]
@@ -83,8 +81,6 @@ More terminology about characters and encoding formats can be found in {{RFC6365
 
 RFCs should be displayed correctly across a wide range of readers and browsers.
 People whose systems do not have the fonts needed to display part of a particular RFC still need to be able to read the definitive versions and publication formats correctly in order to understand and implement the information described in the document.
-
-As stated in the RFC Style Guide {{RFC7322}}, the language of the RFC Series is English.
 
 Searches whose results might include RFCs should return accurate results and support appropriate Unicode string matching behaviors.
 
