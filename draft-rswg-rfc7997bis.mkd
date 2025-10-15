@@ -110,7 +110,7 @@ Company names and geographic names generally do not need ASCII interpretations, 
 
 ## Examples
 
-Where the use of non-ASCII characters is purely part of an example and not otherwise required for correct protocol operation, giving the Unicode equivalent of the non-ASCII characters is not required, but it can improve the readability of the RFC.
+Where the use of non-ASCII characters is purely part of an example or not otherwise required for correct protocol operation, giving the Unicode equivalent of the non-ASCII characters is not required, but it can improve the readability of the RFC.
 For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", it is likely more beneficial to the reader to instead say "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)".
 
 RFCs are often displayed on systems that use only black and white, particularly when printed.
