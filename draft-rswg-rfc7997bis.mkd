@@ -101,13 +101,13 @@ Further, some RFC authors might choose to use something other than the "U+NNNN" 
 
 Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
 If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can use unnormalized text.
-In such a case, a text note should be included to describe why unnormalized text was used.
+In such a case, a note should be included to describe why unnormalized text was used.
 
 ## Names
 
 Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed based on their lived experiences.
 These authors can give their names using only ASCII characters, or as Unicode characters and an ASCII interpretation of their name.
-The RPC policy should be that authors' preferences for display of their names be honored.
+Authors' preferences for display of their names should be honored.
 
 Company names and geographic names generally do not need ASCII interpretations, but they can be included at the discretion of the author and the RPC.
 
