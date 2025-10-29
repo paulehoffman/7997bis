@@ -76,12 +76,12 @@ The term "Unicode characters" means characters define in {{UnicodeCurrent}}.
 
 More terminology about characters and encoding formats can be found in {{RFC6365}}.
 
-# Basic Requirements for Text in RFCs {#basic_requirements}
+# Basic Requirements for Text in RFCs
 
 RFCs should be displayed correctly across a wide range of readers and browsers.
 People whose systems do not have the fonts needed to display part of a particular RFC still need to be able to read the definitive versions and publication formats correctly in order to understand and implement the information described in the document.
 
-Searches whose results might include RFCs should return accurate results and support appropriate Unicode string matching behaviors.
+Any search tools provided by the RPC should support searches for Unicode strings as well as any other encodings used in the RFC Series.
 
 # Policy for Text in RFCs
 
