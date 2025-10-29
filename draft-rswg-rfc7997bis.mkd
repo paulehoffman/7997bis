@@ -81,6 +81,9 @@ More terminology about characters and encoding formats can be found in {{RFC6365
 RFCs should be displayed correctly across a wide range of readers and browsers.
 People whose systems do not have the fonts needed to display part of a particular RFC still need to be able to read the definitive versions and publication formats correctly in order to understand and implement the information described in the document.
 
+The ability to use non-ASCII characters in RFCs in a clear and consistent manner will allow the correct display of proper names and improve the ability to describe internationalized protocols.
+Apart from their role in proper names, non-ASCII characters should be used only when they enhance the technical content and accuracy of the document.
+
 Any search tools provided by the RPC should support searches for Unicode strings as well as any other encodings used in the RFC Series.
 
 # Policy for Text in RFCs
