@@ -119,6 +119,10 @@ However, some examples might require text with color due to the nature of the ex
 If so, those examples need to also include the "U+NNNN" syntax.
 For example, "A color display should be able to differentiate 🔴 (U+1F534), 🟢 (U+1F7E2), and 🔵 (U+1F535)."
 
+# RFC Publication Language
+
+The RFC publication language is English.
+
 # IANA Considerations
 
 This document contains no IANA considerations.
