@@ -72,7 +72,7 @@ The RFC Publication Center (RPC) is responsible for implementing the policies in
 The term "non-ASCII characters" means characters outside the set that was defined in ASCII.
 ASCII is described in {{RFC20}}.
 
-The term "Unicode characters" means characters define in {{UnicodeCurrent}}.
+The term "Unicode characters" means characters defined in {{UnicodeCurrent}}.
 
 More terminology about characters and encoding formats can be found in {{RFC6365}}.
 
@@ -97,7 +97,7 @@ The preferred method for describing such characters is using the "U+NNNN" syntax
 {{BCP137}} describes the pros and cons of different options for identifying Unicode characters and may help authors decide how to represent the non-ASCII characters in their documents.
 
 Note that this policy only applies to normative or descriptive text; text such as names does not need character description.
-Further, some RFC authors might choose to use something other than the "U+NNNN" syntax to describing characters, such as if the RFC already covers a different syntax that the reader will understand from the rest of the RFC.
+Further, some RFC authors might choose to use something other than the "U+NNNN" syntax to describe characters, such as if the RFC already covers a different syntax that the reader will understand from the rest of the RFC.
 
 Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
 If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can use unnormalized text.
@@ -138,7 +138,7 @@ Valid Unicode that matches the expected text must be verified in order to preser
 
 # Acknowledgements
 
-This document is based on {{RFC7997}} that was authored by Heather Flanagan.
+This document is based on {{RFC7997}} which was authored by Heather Flanagan.
 
 The acknowledgements from {{RFC7997}} are
 to the members of the IAB i18n program,
@@ -147,10 +147,14 @@ Nevil Brownlee, Tony Hansen, Joe
 Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach,
 Alice Russo, Robert Sparks, and Dave Thaler.
 
-This current document was greatly helped by contributions from the RFC Series Working Group (RSWG), including from
+Writing this document was greatly helped by contributions from the RFC Series Working Group (RSWG), including:
 Brian Carpenter,
 Carsten Bormann,
 Eliot Lear,
+John Klensin,
 John Levine,
-and
-Martin Thomson.
+Martin Dürst,
+Martin Thomson,
+Pete Resnick,
+Rob Sayre, and
+Russ Housley.
