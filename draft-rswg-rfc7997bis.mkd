@@ -58,6 +58,7 @@ This document obsoletes {{RFC7997}}.
 This document makes substantial changes to the policies in {{RFC7997}} based on the positive experience since its publication.
 
 The RFC Publication Center (RPC) is responsible for implementing the policies in this document, as described in {{RFC9720}}.
+The RPC style guides include guidance for authors about the use of Unicode characters.
 
 ## Terminology
 
