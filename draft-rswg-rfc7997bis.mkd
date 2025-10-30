@@ -96,7 +96,7 @@ The policy for the RFC Series is that all displayable text is allowed as long as
 There are many Unicode characters that obviously cannot be displayed (such as control characters), and many whose ability to be displayed is debatable.
 If an RFC includes such characters in normative or descriptive text, the RFC needs to also clearly describe the character.
 
-The preferred method for describing such characters is using the U+ notation from {{BCP137}}.
+The preferred method for describing such characters is using the U+ notation from {{BCP137}}, and also possibly using the character's official name from the Unicode Standard {{UnicodeCurrent}}.
 {{BCP137}} describes the pros and cons of different options for identifying Unicode characters and may help authors decide how to represent the non-ASCII characters in their documents.
 
 Note that this policy only applies to normative or descriptive text; text such as names does not need character description.
@@ -117,13 +117,13 @@ Company names and geographic names generally do not need ASCII interpretations, 
 ## Examples
 
 Where the use of non-ASCII characters is purely part of an example or not otherwise required for correct protocol operation, giving the Unicode equivalent of the non-ASCII characters is not required, but it can improve the readability of the RFC.
-For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", text that says "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)" is likely more beneficial to the reader.
+For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", text that says "The value can be followed by a monetary symbol such as ¥ (U+00A5) (YEN SIGN) or € (U+20AC) (EURO SIGN)" is likely more beneficial to the reader.
 
 RFCs are often displayed on systems that use only black and white, particularly when printed.
 Because of this, examples should generally use characters that do not specify a color.
 However, some examples might require text with color due to the nature of the examples.
 If so, those examples need to also include U+ notation.
-For example, "A color display should be able to differentiate 🔴 (U+1F534), 🟢 (U+1F7E2), and 🔵 (U+1F535)."
+For example, "A color display should be able to differentiate 🔴 (U+1F534) (LARGE RED CIRCLE), 🟢 (U+1F7E2) (LARGE GREEN CIRCLE), and 🔵 (U+1F535) (LARGE BLUE CIRCLE)."
 
 # RFC Publication Language
 
