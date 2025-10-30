@@ -40,10 +40,7 @@ informative:
 
 --- abstract
 
-The early policy for the RFC Series was that RFCs could only contain characters from the ASCII character set.
-Later policy, from RFC 7997, allowed more characters and enforced an encoding for RFCs of UTF-8.
-Since RFC 7997 was published, the IETF community has had much more experience of using non-ASCII characters in RFCs.
-
+This document sets policy for the inclusion of characters in the definitive versions and publication formats of RFCs.
 The policy for the RFC Series is that all displayable text is allowed as long as the reader of an RFC can interpret that text.
 This document obsoletes RFC 7997.
 
@@ -53,8 +50,10 @@ This document obsoletes RFC 7997.
 
 # Introduction
 
-This document sets policy for the inclusion of characters in the definitive versions and publication formats of RFCs.
-It also reaffirms the policy that the encoding format for the RFC Series is UTF-8, {{STD63}}.
+The early policy for the RFC Series was that RFCs could only contain characters from the ASCII character set.
+Later policies, from {{RFC7997}}, allowed more characters, set the language of the RFC Series to be English, and set the encoding for RFCs of UTF-8.
+In the time since {{RFC7997}} was published, the IETF community has had much more experience of using non-ASCII characters in RFCs.
+
 This document obsoletes {{RFC7997}}.
 This document makes substantial changes to the policies in {{RFC7997}} based on the positive experience since its publication.
 
@@ -121,6 +120,10 @@ For example, "A color display should be able to differentiate 🔴 (U+1F534) (LA
 # RFC Publication Language
 
 The RFC publication language is English.
+
+# RFC Publication Encoding
+
+The encoding format for the RFC Series is UTF-8 {{STD63}}.
 
 # IANA Considerations
 
