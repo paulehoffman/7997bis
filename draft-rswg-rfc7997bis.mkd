@@ -33,17 +33,10 @@ normative:
     author:
     - org: The Unicode Consortium
     target: http://www.unicode.org/versions/latest/
-    date: 2023
 
 informative:
   RFC20:
   RFC6365:
-  UnicodeNorm:
-    title: Unicode Standard Annex #15: Unicode Normalization Form
-    author:
-    - org: The Unicode Consortium
-    target: http://www.unicode.org/reports/tr15/
-    date: 2023
 
 --- abstract
 
@@ -102,7 +95,7 @@ The preferred method for describing such characters is using the U+ notation fro
 Note that this policy only applies to normative or descriptive text; text such as names does not need character description.
 Further, some RFC authors might choose to use something other than the U+ notation to describe characters, such as if the RFC already covers a different syntax that the reader will understand from the rest of the RFC.
 
-Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeNorm}}.
+Characters in an RFC will generally appear in Normalization Form C (NFC) as defined in {{UnicodeLatest}}.
 If the RFC would be more correct and more understandable with particular characters not in NFC, the RPC can use unnormalized text.
 In such a case, a note should be included to describe why unnormalized text was used.
 
