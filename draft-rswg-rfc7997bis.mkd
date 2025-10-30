@@ -112,7 +112,7 @@ Company names and geographic names generally do not need Latin equivalents, but 
 Where the use of non-ASCII characters is purely part of an example or not otherwise required for correct protocol operation, giving the Unicode code points and Unicode names of the non-ASCII characters is not required, but it can improve the readability of the RFC.
 For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", text that says "The value can be followed by a monetary symbol such as ¥ (U+00A5) (YEN SIGN) or € (U+20AC) (EURO SIGN)" is likely more beneficial to the reader.
 
-RFCs are often displayed on systems that use only black and white, particularly when printed.
+RFCs may be viewed using only black and white or grayscale, particularly when printed.
 Because of this, examples should generally use characters that do not specify a color.
 However, some examples might require text with color due to the nature of the examples.
 If so, those examples need to also include U+ notation.
