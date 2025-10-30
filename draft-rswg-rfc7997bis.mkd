@@ -88,7 +88,7 @@ The policy for the RFC Series is that all displayable text is allowed as long as
 There are many Unicode characters that obviously cannot be displayed (such as control characters), and many whose ability to be displayed is debatable.
 If an RFC includes such characters in normative or descriptive text, the RFC needs to also clearly describe the character.
 
-The preferred method for describing such characters is using the U+ notation from {{BCP137}}, and also possibly using the character's official name from the Unicode Standard {{UnicodeLatest}}.
+The preferred method for describing such characters is using the U+ notation from {{BCP137}} and/or possibly using the character's official name from the Unicode Standard {{UnicodeLatest}}.
 {{BCP137}} describes the pros and cons of different options for identifying Unicode characters and may help authors decide how to represent the non-ASCII characters in their documents.
 
 Note that this policy only applies to normative or descriptive text; text such as names does not need character description.
