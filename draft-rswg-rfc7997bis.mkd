@@ -58,7 +58,7 @@ This document obsoletes {{RFC7997}}.
 This document makes substantial changes to the policies in {{RFC7997}} based on the positive experience since its publication.
 
 The RFC Publication Center (RPC) is responsible for implementing the policies in this document, as described in {{RFC9720}}.
-The RPC style guides include guidance for authors about the use of Unicode characters.
+The RPC style guides may define which characters authors may use and how they are used.
 
 ## Terminology
 
@@ -77,14 +77,16 @@ More terminology about characters and encoding formats can be found in {{RFC6365
 RFCs should only contain text that can be displayed correctly across a wide range of readers and browsers.
 People whose systems do not have the fonts needed to display part of a particular RFC still need to be able to read the definitive versions and publication formats correctly in order to understand and implement the information described in the document.
 
+The ability to use non-ASCII characters in RFCs in a clear and consistent manner allows the correct display of proper names and improves the ability to describe internationalized protocols.
+
 The ability to use non-ASCII characters in RFCs in a clear and consistent manner will allow the correct display of proper names and improve the ability to describe internationalized protocols.
 Apart from their role in proper names, non-ASCII characters should be used only when they enhance the technical content and accuracy of the document.
 
-Any search tools provided by the RPC should support searches for Unicode strings as well as any other encodings used in the RFC Series.
-
 # Policy for Text in RFCs
 
-The policy for the RFC Series is that all displayable text is allowed as long as long as there is a high expectation that readers of an RFC will be able to interpret its text as intended.
+English is the required language of RFCs.
+However, because non-ASCII characters are often required for instances including proper names and examples, the policy for the RFC Series is that all displayable text is allowed as long as there is a high expectation that readers of an RFC will be able to interpret its text as intended.
+Apart from their role in proper names, non-ASCII characters should be used only when they enhance the technical content and accuracy of the document.
 
 There are many Unicode characters that obviously cannot be displayed (such as control characters), and many whose ability to be displayed is debatable.
 If an RFC includes such characters in normative or descriptive text, the RFC needs to also clearly describe the character.
