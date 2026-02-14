@@ -67,7 +67,7 @@ ASCII is described in {{RFC20}}.
 
 The term "Unicode characters" means characters defined in {{UnicodeLatest}}.
 
-"U+ notation" means using the characters "U+" and a hexidecimal number to represent a Unicode code point.
+"U+ notation" means using the characters "U+" and a hexadecimal number to represent a Unicode code point.
 See {{BCP137}} for more on U+ notation.
 
 More terminology about characters and encoding formats can be found in {{RFC6365}}.
