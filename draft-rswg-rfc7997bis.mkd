@@ -1,7 +1,7 @@
 ---
 title: Text in RFCs
 abbrev: Text in RFCs
-docname: draft-rswg-rfc7997bis-08
+docname: draft-rswg-rfc7997bis-09
 
 stand_alone: true
 v: 3
@@ -67,7 +67,7 @@ ASCII is described in {{RFC20}}.
 
 The term "Unicode characters" means characters defined in {{UnicodeLatest}}.
 
-"U+ notation" means using the characters "U+" and a decimal number to represent a Unicode code point.
+"U+ notation" means using the characters "U+" and a hexidecimal number to represent a Unicode code point.
 See {{BCP137}} for more on U+ notation.
 
 More terminology about characters and encoding formats can be found in {{RFC6365}}.
