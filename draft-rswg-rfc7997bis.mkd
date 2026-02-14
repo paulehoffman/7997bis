@@ -1,7 +1,7 @@
 ---
 title: Text in RFCs
 abbrev: Text in RFCs
-docname: draft-rswg-rfc7997bis-07
+docname: draft-rswg-rfc7997bis-08
 
 stand_alone: true
 v: 3
@@ -67,7 +67,7 @@ ASCII is described in {{RFC20}}.
 
 The term "Unicode characters" means characters defined in {{UnicodeLatest}}.
 
-"U+ notation" means the use of using the characters "U+" and a decimal number to represent a Unicode code point.
+"U+ notation" means using the characters "U+" and a decimal number to represent a Unicode code point.
 See {{BCP137}} for more on U+ notation.
 
 More terminology about characters and encoding formats can be found in {{RFC6365}}.
@@ -101,7 +101,7 @@ In such a case, a note should be included to describe why unnormalized text was 
 
 ## Names
 
-Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed based on their lived experiences.
+Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed.
 Authors can give their names using only Latin script characters, or using non-Latin script and an equivalent in Latin script.
 Authors' preferences for display of their names should be honored.
 
@@ -111,13 +111,17 @@ Company names and geographic names generally do not need Latin equivalents, but 
 
 Where the use of non-ASCII characters is purely part of an example or not otherwise required for correct protocol operation, giving the Unicode code points and Unicode names of the non-ASCII characters is not required, but it can improve the readability of the RFC.
 An RFC can use either or both forms, whichever is sensible in the circumstance.
-For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", text that either says "The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)" or text that says "The value can be followed by a monetary symbol such as ¥ (U+00A5) (YEN SIGN) or € (U+20AC) (EURO SIGN)" is likely more beneficial to the reader.
+For example, for text that might just say "The value can be followed by a monetary symbol such as ¥ or €", text that says one of the following is likely more beneficial to the reader:
+
+- The value can be followed by a monetary symbol such as ¥ (U+00A5) or € (U+20AC)
+- The value can be followed by a monetary symbol such as ¥ (YEN SIGN) or € (EURO SIGN)
+- The value can be followed by a monetary symbol such as ¥ (U+00A5, YEN SIGN) or € (U+20AC, EURO SIGN)
 
 RFCs may be viewed using only black and white or grayscale, particularly when printed.
 Because of this, examples should generally use characters that do not specify a color.
 However, some examples might require text with color due to the nature of the examples.
 If so, those examples need to also include U+ notation.
-For example, "A color display should be able to differentiate 🔴 (U+1F534) (LARGE RED CIRCLE), 🟢 (U+1F7E2) (LARGE GREEN CIRCLE), and 🔵 (U+1F535) (LARGE BLUE CIRCLE)."
+For example, "A color display should be able to differentiate 🔴 (U+1F534, LARGE RED CIRCLE), 🟢 (U+1F7E2, LARGE GREEN CIRCLE), and 🔵 (U+1F535, LARGE BLUE CIRCLE)."
 
 # RFC Publication Language
 
