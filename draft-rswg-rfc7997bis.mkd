@@ -1,7 +1,7 @@
 ---
 title: Text in RFCs
 abbrev: Text in RFCs
-docname: draft-rswg-rfc7997bis-09
+docname: draft-rswg-rfc7997bis-10
 
 stand_alone: true
 v: 3
@@ -43,8 +43,6 @@ informative:
 This document sets policy for the inclusion of characters in the definitive versions and publication formats of RFCs.
 The policy for the RFC Series is that all displayable text is allowed as long as there is a high expectation that readers of an RFC will be able to interpret its text as intended.
 This document obsoletes RFC 7997.
-
-\[\[ A repository for this draft can be found [here](https://github.com/paulehoffman/7997bis). \]\]
 
 --- middle
 
@@ -100,16 +98,6 @@ If the RFC would be more correct and more understandable with particular charact
 In such a case, a note should be included to describe why unnormalized text was used.
 
 ## Names
-
-OLD TEXT
-
-Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed.
-Authors can give their names using only Latin script characters, or using non-Latin script and an equivalent in Latin script.
-Authors' preferences for display of their names should be honored.
-
-Company names and geographic names generally do not need Latin equivalents, but they can be included at the discretion of the author and the RPC.
-
-NEW TEXT
 
 Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed.
 If the author's preferred name is in a non-Latin script, they must also provide an alternate name in Latin script.
