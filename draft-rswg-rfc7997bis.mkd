@@ -101,11 +101,21 @@ In such a case, a note should be included to describe why unnormalized text was 
 
 ## Names
 
+OLD TEXT
+
 Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed.
 Authors can give their names using only Latin script characters, or using non-Latin script and an equivalent in Latin script.
 Authors' preferences for display of their names should be honored.
 
 Company names and geographic names generally do not need Latin equivalents, but they can be included at the discretion of the author and the RPC.
+
+NEW TEXT
+
+Authors of RFCs whose names include non-ASCII characters will likely have preferences for how their names are displayed.
+If the author's preferred name is in a non-Latin script, they must also provide an alternate name in Latin script.
+Authors' preferences for display of their names should be honored.
+
+Company names and geographic names generally do not need Latin alternates, but they can be included at the discretion of the author and the RPC.
 
 ## Examples
 
